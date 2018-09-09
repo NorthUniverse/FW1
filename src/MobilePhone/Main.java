@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("Starting mobile phone: ");
         MobilePhone mobilePhone = new MobilePhone("2000");
 
         boolean quit = false;
@@ -26,25 +27,28 @@ public class Main {
                     contactName = contactScanner.nextLine();
                     System.out.print("Enter contact phone number to add: ");
                     contactPhoneNumber = contactScanner.nextLine();
-//                    Contact newContact = Contact.createContact(contactName, contactPhoneNumber);
                     mobilePhone.addContact(contactName, contactPhoneNumber);
                     printPhoneMenu();
                     break;
                 case 2:
                     System.out.print("Enter contact name to remove: ");
                     contactName = contactScanner.nextLine();
-                    mobilePhone.removeContact(contactName);
+                    if (mobilePhone.searchContact(contactName)) {
+                        mobilePhone.removeContact(contactName);
+                    }
                     printPhoneMenu();
                     break;
                 case 3:
                     System.out.print("Enter contact name to edit: ");
                     String oldName = contactScanner.nextLine();
-                    System.out.print("Enter new contact name: ");
-                    contactName = contactScanner.nextLine();
-                    System.out.print("Enter new contact phone number: ");
-                    contactPhoneNumber = contactScanner.nextLine();
-                    mobilePhone.editContact(oldName, contactName, contactPhoneNumber);
-                    printPhoneMenu();
+                    if (mobilePhone.searchContact(oldName)) {
+                        System.out.print("Enter new contact name: ");
+                        contactName = contactScanner.nextLine();
+                        System.out.print("Enter new contact phone number: ");
+                        contactPhoneNumber = contactScanner.nextLine();
+                        mobilePhone.editContact(oldName, contactName, contactPhoneNumber);
+                        printPhoneMenu();
+                    }
                     break;
                 case 4:
                     System.out.print("Enter contact name to search: ");
@@ -53,7 +57,6 @@ public class Main {
                     printPhoneMenu();
                     break;
                 case 5:
-                    System.out.println("Here are you list of contacts: ");
                     mobilePhone.printContacts();
                     printPhoneMenu();
                     break;
@@ -77,5 +80,6 @@ public class Main {
         System.out.println("5. Print Contact list ");
         System.out.println("6. Print Menu Options ");
         System.out.println("7. Exit ");
+        System.out.print("Enter Option: ");
     }
 }

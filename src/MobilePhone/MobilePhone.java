@@ -21,88 +21,75 @@ public class MobilePhone {
                 return;
             }
             else if(contactList.get(i).getPhoneNumber().equals(newPhoneNumber)) {
-                System.out.println(newPhoneNumber + " already exists! Cannot add " + newPhoneNumber);
+                System.out.println(newPhoneNumber + " phone number already exists! Cannot add phone number" + newPhoneNumber);
                 return;
             }
         }
-        Contact addContact = Contact.createContact(newName, newPhoneNumber);
-        contactList.add(addContact);
+
+        contactList.add(new Contact(newName, newPhoneNumber));
         System.out.println(newName + " was added");
     }
 
-    public void addContact(Contact contact) {
-
-        for(int i=0; i<contactList.size(); i++) {
-            if(contactList.get(i).getName().equals(contact.getName())) {
-                System.out.println(contact.getName() + " already exists! Cannot add " + contact.getName());
-                return;
-            }
-            else if(contactList.get(i).getPhoneNumber().equals(contact.getPhoneNumber())) {
-                System.out.println(contact.getPhoneNumber() + " already exists! Cannot add " + contact.getPhoneNumber());
-                return;
-            }
-        }
-        Contact addContact = Contact.createContact("A", "C");
-        contactList.add(contact);
-        System.out.println(contact.getName() + " was added");
-    }
 
     public void removeContact(String enteredName) {
 
+        boolean flag = false;
         for(int i=0; i<contactList.size(); i++) {
             if(contactList.get(i).getName().equals(enteredName)) {
                 contactList.remove(i);
+                flag = true;
                 System.out.println(enteredName + " was removed from the contact list");
                 return;
             }
-            else {
-                System.out.println(enteredName + " is not in contact list! Cannot remove " + enteredName);
-                return;
-            }
+        }
+        if (!flag) {
+            System.out.println(enteredName + " is not in contact list! Cannot remove " + enteredName);
         }
     }
     public void editContact(String oldName, String newName, String newPhoneNumber) {
 
+        boolean flag = false;
         for(int i=0; i<contactList.size(); i++) {
             if(contactList.get(i).getName().equals(oldName)) {
                 contactList.set(i, new Contact(newName, newPhoneNumber));
                 System.out.println(oldName + " was changed to " + newName + " with phone number " + newPhoneNumber);
+                flag = true;
                 return;
             }
-            else {
-                System.out.println(oldName + " is not in contact list! Cannot edit " + oldName);
-                return;
-            }
+        }
+        if (!flag) {
+            System.out.println(oldName + " is not in contact list! Cannot remove " + oldName);
         }
     }
 
-    public void searchContact(String contactName) {
+    public boolean searchContact(String contactName) {
 
+        boolean flag = false;
         for(int i=0; i<contactList.size(); i++) {
             if(contactList.get(i).getName().equals(contactName)) {
                 System.out.println(contactName + " exists in the contact lists!");
-                return;
-            }
-            else {
-                System.out.println(contactName + " does not exists in the contact lists!");
-                return;
+                flag = true;
+                return true;
             }
         }
+        if (!flag) {
+            System.out.println(contactName + " is not in contact list! Cannot remove " + contactName);
+            return false;
+        }
+        return false;
     }
 
     public void printContacts() {
 
-        for(int i=0; i<contactList.size(); i++) {
-            if(contactList.size() < 1) {
-                System.out.println("There are no contacts!");
-                return;
-            }
-            else {
-                System.out.println((i+1) + ". " + contactList.get(i).getName() + ": " + contactList.get(i).getPhoneNumber());
-                System.out.println(" ");
-                return;
-            }
+        if (contactList.size() < 1) {
+            System.out.println("There are no contacts in your list");
+            return;
         }
+        System.out.println("Here are you list of contacts: ");
+        for(int i=0; i<contactList.size(); i++) {
+            System.out.println((i + 1) + ". " + contactList.get(i).getName() + ": " + contactList.get(i).getPhoneNumber());
+        }
+        System.out.println(" ");
     }
 
 
