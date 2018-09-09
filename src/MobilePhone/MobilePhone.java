@@ -67,13 +67,13 @@ public class MobilePhone {
         boolean flag = false;
         for(int i=0; i<contactList.size(); i++) {
             if(contactList.get(i).getName().equals(contactName)) {
-                System.out.println(contactName + " exists in the contact lists!");
+                System.out.println(contactName + " exists in the contact list!");
                 flag = true;
                 return true;
             }
         }
         if (!flag) {
-            System.out.println(contactName + " is not in contact list! Cannot remove " + contactName);
+            System.out.println(contactName + " is not in contact list!");
             return false;
         }
         return false;
