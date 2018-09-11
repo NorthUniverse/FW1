@@ -33,31 +33,30 @@ public class Main {
                 case 2:
                     System.out.print("Enter contact name to remove: ");
                     contactName = contactScanner.nextLine();
-                    if (mobilePhone.searchContact(contactName)) {
-                        mobilePhone.removeContact(contactName);
-                    }
+                    mobilePhone.removeContact(contactName);
                     printPhoneMenu();
                     break;
                 case 3:
                     System.out.print("Enter contact name to edit: ");
                     String oldName = contactScanner.nextLine();
-                    if (mobilePhone.searchContact(oldName)) {
-                        System.out.print("Enter new contact name: ");
-                        contactName = contactScanner.nextLine();
-                        System.out.print("Enter new contact phone number: ");
-                        contactPhoneNumber = contactScanner.nextLine();
-                        mobilePhone.editContact(oldName, contactName, contactPhoneNumber);
-                        printPhoneMenu();
-                    }
+                    System.out.print("Enter new contact name: ");
+                    contactName = contactScanner.nextLine();
+                    System.out.print("Enter new contact phone number: ");
+                    contactPhoneNumber = contactScanner.nextLine();
+                    mobilePhone.editContact(oldName, contactName, contactPhoneNumber);
+                    printPhoneMenu();
                     break;
                 case 4:
                     System.out.print("Enter contact name to search: ");
                     contactName = contactScanner.nextLine();
-                    mobilePhone.searchContact(contactName);
+                    mobilePhone.searchContact(contactName, true);
                     printPhoneMenu();
                     break;
                 case 5:
                     mobilePhone.printContacts();
+                    printPhoneMenu();
+                    break;
+                case 6:
                     printPhoneMenu();
                     break;
                 case 7:
@@ -82,4 +81,5 @@ public class Main {
         System.out.println("7. Exit ");
         System.out.print("Enter Option: ");
     }
+
 }

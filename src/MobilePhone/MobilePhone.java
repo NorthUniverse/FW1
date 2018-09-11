@@ -49,6 +49,15 @@ public class MobilePhone {
     public void editContact(String oldName, String newName, String newPhoneNumber) {
 
         boolean flag = false;
+
+        for(int i=0; i<contactList.size(); i++) {
+            if(contactList.get(i).getName().equals(newName)) {
+                System.out.println(newName + " contact already exists, cannot add " + newName);
+                flag = true;
+                return;
+            }
+        }
+
         for(int i=0; i<contactList.size(); i++) {
             if(contactList.get(i).getName().equals(oldName)) {
                 contactList.set(i, new Contact(newName, newPhoneNumber));
@@ -62,12 +71,14 @@ public class MobilePhone {
         }
     }
 
-    public boolean searchContact(String contactName) {
+    public boolean searchContact(String contactName, boolean print) {
 
         boolean flag = false;
         for(int i=0; i<contactList.size(); i++) {
             if(contactList.get(i).getName().equals(contactName)) {
-                System.out.println(contactName + " exists in the contact list!");
+                if(print) {
+                    System.out.println("Name: " + contactList.get(i).getName() + " -> Phone Number: " + contactList.get(i).getPhoneNumber());
+                }
                 flag = true;
                 return true;
             }
