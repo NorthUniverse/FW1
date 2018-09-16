@@ -16,25 +16,22 @@ public class Branch {
     }
 
     public void addCustomer(Branch branch, String customerName, double initialTransaction) {
-        if (!customerExists(customerName, false)) {
+        if (findCustomer(customerName, false) == null) {
             branch.customers.add(new Customer(customerName, initialTransaction));
+            System.out.println(customerName + " was added to " + branch.getBranchName());
         } else {
             System.out.println(customerName + " customer already exists at " + branch.getBranchName());
         }
     }
 
     public void removeCustomer(Branch branch, String name) {
-        boolean flag = false;
-        for (int i = 0; i < branch.customers.size(); i++) {
-            if (branch.customers.get(i).getName().equals(name)) {
-                branch.customers.remove(i);
-                System.out.println(name + " was removed from " + branch.getBranchName());
-                flag = true;
-                return;
-            }
-        }
-        if (!flag) {
-            System.out.println(name + " was not found at " + branch.getBranchName());
+        Customer customer = branch.findCustomer(name, false);
+        if (customer != null) {
+            int customerIndex = branch.customers.indexOf(customer);
+            branch.customers.remove(customerIndex);
+            System.out.println(name + " was removed from " + branch.getBranchName());
+        } else {
+            System.out.println(name + " is not registered at " + branch.getBranchName());
         }
     }
 
@@ -43,13 +40,12 @@ public class Branch {
     }
 
     public void printAllCustomersAtBranch(Branch branch) {
-        if(branch.customers.size() > 0) {
+        if (branch.customers.size() > 0) {
             System.out.println("Customer at " + branch.getBranchName() + " are:");
             for (int i = 0; i < branch.customers.size(); i++) {
-                System.out.println((i+1) + ". " + branch.customers.get(i).getName());
+                System.out.println((i + 1) + ". " + branch.customers.get(i).getName());
             }
-        }
-        else {
+        } else {
             System.out.println("No customers present at " + branch.getBranchName());
         }
     }
@@ -59,12 +55,12 @@ public class Branch {
         customer.printTransactions();
     }
 
-    public boolean customerExists(String name, boolean printMessage) {
+    public Customer findCustomer(String name, boolean printMessage) {
         boolean flag = false;
         for (int i = 0; i < this.customers.size(); i++) {
             if (this.customers.get(i).getName().equals(name)) {
                 flag = true;
-                return true;
+                return this.customers.get(i);
             }
         }
         if (!flag) {
@@ -72,6 +68,6 @@ public class Branch {
                 System.out.println(name + " is not registered at " + this.getBranchName());
             }
         }
-        return false;
+        return null;
     }
 }

@@ -37,14 +37,13 @@ public class Main {
                 case 3:
                     System.out.print("Enter branch name to search: ");
                     branchName = textScanner.nextLine();
-                    if (bank.branchExists(branchName)) {
+                    if (bank.findBranch(branchName, true) != null) {
                         System.out.println(branchName + " exists!");
                     }
                     printMenuOptions();
                     break;
                 case 4:
-                    System.out.print("Branches at " + bank.getBankName() + " are:");
-                    bank.printAllBranches(bank);
+                    bank.printAllBranches();
                     printMenuOptions();
                     break;
                 case 5:
@@ -52,43 +51,77 @@ public class Main {
                     customerName = textScanner.nextLine();
                     System.out.print("Enter initial transaction to customer to add: ");
                     transactionAmount = doubleScanner.nextDouble();
-                    System.out.print("Enter branch name to add the customer " + customerName);
+                    System.out.print("Enter branch name to add the customer " + customerName + " ");
                     branchName = textScanner.nextLine();
-                    boolean flag = false;
-                    for (int i = 0; i < bank.getBranches().size(); i++) {
-                        Branch eachBranch = bank.getBranches().get(i);
-                        if (eachBranch.getBranchName().equals(branchName)) {
-                            flag = true;
-                            eachBranch.addCustomer(eachBranch, customerName, transactionAmount);
-                        }
+                    Branch branch = bank.findBranch(branchName, true);
+                    if (branch != null) {
+                        branch.addCustomer(branch, customerName, transactionAmount);
                     }
-//                    printMenuOptions();
+                    printMenuOptions();
                     break;
                 case 6:
-                    System.out.print("Enter branch name to remove: ");
+                    System.out.print("Enter customer name to remove: ");
+                    customerName = textScanner.nextLine();
+                    System.out.print("Enter branch name to remove the customer " + customerName + " ");
                     branchName = textScanner.nextLine();
-                    bank.removeBranch(branchName);
+                    branch = bank.findBranch(branchName, true);
+                    if (branch != null) {
+                        branch.removeCustomer(branch, customerName);
+                    }
                     printMenuOptions();
                     break;
                 case 7:
-                    System.out.print("Enter branch name to search: ");
+                    System.out.print("Enter customer name to search: ");
+                    customerName = textScanner.nextLine();
+                    System.out.print("Enter branch name to search the customer " + customerName + " ");
                     branchName = textScanner.nextLine();
-                    if (bank.branchExists(branchName)) {
-                        System.out.println(branchName + " exists!");
+                    branch = bank.findBranch(branchName, true);
+                    if (branch != null) {
+                        branch.findCustomer(customerName, true);
                     }
                     printMenuOptions();
                     break;
                 case 8:
                     System.out.print("Enter branch name to print all customers ");
                     branchName = textScanner.nextLine();
-                    flag = false;
-                    for (int i = 0; i < bank.getBranches().size(); i++) {
-                        Branch branch = bank.getBranches().get(i);
-                        if (branch.getBranchName().equals(branchName)) {
-                            flag = true;
-                            branch.printAllCustomersAtBranch(branch);
+                    branch = bank.findBranch(branchName, true);
+                    if (branch != null) {
+                        branch.printAllCustomersAtBranch(branch);
+                    }
+                    printMenuOptions();
+                    break;
+                case 9:
+                    System.out.print("Enter customer name to make transaction ");
+                    customerName = textScanner.nextLine();
+                    System.out.print("Enter transaction amount to add: ");
+                    transactionAmount = doubleScanner.nextDouble();
+                    System.out.print("Enter branch name of the customer " + customerName + " ");
+                    branchName = textScanner.nextLine();
+                    branch = bank.findBranch(branchName, true);
+                    if (branch != null) {
+                        Customer customer = branch.findCustomer(customerName, true);
+                        if (customer != null) {
+                            customer.makeTransaction(transactionAmount);
+                            System.out.println(transactionAmount + "$ transaction was made to custoemr " + customerName);
                         }
                     }
+                    printMenuOptions();
+                    break;
+                case 10:
+                    System.out.print("Enter branch name to search the customer ");
+                    branchName = textScanner.nextLine();
+                    System.out.print("Enter customer name to print all transactions: ");
+                    customerName = textScanner.nextLine();
+                    branch = bank.findBranch(branchName, true);
+                    if (branch != null) {
+                        Customer customer = branch.findCustomer(customerName, true);
+                        if (customer != null) {
+                            customer.printTransactions();
+                        }
+                    }
+                    printMenuOptions();
+                    break;
+                case 11:
                     printMenuOptions();
                     break;
                 default:
@@ -100,6 +133,7 @@ public class Main {
     }
 
     private static void printMenuOptions() {
+        System.out.println("               ");
         System.out.println("1. Add new branch ");
         System.out.println("2. Remove branch ");
         System.out.println("3. Search for a branch ");
@@ -111,5 +145,6 @@ public class Main {
         System.out.println("9. Make a transaction for a customer ");
         System.out.println("10. Print all transactions for a customer ");
         System.out.println("11. Exit ");
+        System.out.println("               ");
     }
 }

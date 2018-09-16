@@ -17,8 +17,8 @@ public class Customer {
     }
 
     public void printTransactions() {
-        for(int i=0; i<transactions.size(); i++) {
-            System.out.println(transactions.get(i));
+        for (int i = 0; i < transactions.size(); i++) {
+            System.out.println((i + 1) + ". " + transactions.get(i));
         }
     }
 
