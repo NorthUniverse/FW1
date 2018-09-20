@@ -122,7 +122,7 @@ public class Main {
                     printMenuOptions();
                     break;
                 case 11:
-                    printMenuOptions();
+                    quit = true;
                     break;
                 default:
                     quit = true;
