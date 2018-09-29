@@ -8,39 +8,38 @@ public class Playlist {
     private LinkedList<Song> songLinkedList;
 
     public Playlist(String albumName) {
-        this.playlistName = albumName;
+        this.playlistName = playlistName;
         songLinkedList = new LinkedList<Song>();
     }
 
-    public String getplaylistName() {
+
+    private String getplaylistName() {
         return playlistName;
     }
 
-    public void addSong(String songName, int songDuration) {
+    public void addSongToPlaylist(String songName, int songDuration) {
         Song searchSong = songExists(songName);
-        if(searchSong == null) {
-            songLinkedList.add(new Song(songName,songDuration));
+        if (searchSong == null) {
+            songLinkedList.add(new Song(songName, songDuration));
             System.out.println(songName + " has been added to " + playlistName);
-        }
-        else {
+        } else {
             System.out.println(songName + " already exists in " + getplaylistName());
         }
     }
 
-    public void removeSong(String songName) {
+    public void removeSongFromPlaylist(String songName) {
         Song searchSong = songExists(songName);
-        if(searchSong != null) {
+        if (searchSong != null) {
             songLinkedList.remove(searchSong);
-        }
-        else {
+        } else {
             System.out.println(songName + " does not exists in " + getplaylistName());
         }
     }
 
-    public Song songExists(String songName) {
+    public Song songExists(String songName, Jukebox jukebox) {
         ListIterator<Song> i = this.songLinkedList.listIterator();
-        while(i.hasNext()) {
-            if(i.next().getSongName().equals(songName)) {
+        while (i.hasNext()) {
+            if (i.next().getSongName().equals(songName)) {
                 return i.next();
             }
         }
