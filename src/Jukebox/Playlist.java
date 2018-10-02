@@ -6,43 +6,65 @@ import java.util.ListIterator;
 public class Playlist {
     private String playlistName;
     private LinkedList<Song> songLinkedList;
+    boolean goingForward = true;
 
-    public Playlist(String albumName) {
+    public Playlist(String playlistName) {
         this.playlistName = playlistName;
         songLinkedList = new LinkedList<Song>();
     }
 
-
-    private String getplaylistName() {
+    public String getplaylistName() {
         return playlistName;
     }
 
-    public void addSongToPlaylist(String songName, int songDuration) {
-        Song searchSong = songExists(songName);
-        if (searchSong == null) {
-            songLinkedList.add(new Song(songName, songDuration));
-            System.out.println(songName + " has been added to " + playlistName);
-        } else {
-            System.out.println(songName + " already exists in " + getplaylistName());
-        }
+    public void addSongToPlaylist(Song song) {
+        songLinkedList.add(song);
+        System.out.println(song.getSongName() + " has been added to " + getplaylistName());
     }
 
-    public void removeSongFromPlaylist(String songName) {
-        Song searchSong = songExists(songName);
-        if (searchSong != null) {
-            songLinkedList.remove(searchSong);
-        } else {
-            System.out.println(songName + " does not exists in " + getplaylistName());
-        }
+    public void removeSongFromPlaylist(Song song) {
+        songLinkedList.remove(song);
+        System.out.println(song.getSongName() + " has been added to " + getplaylistName());
     }
 
-    public Song songExists(String songName, Jukebox jukebox) {
-        ListIterator<Song> i = this.songLinkedList.listIterator();
-        while (i.hasNext()) {
-            if (i.next().getSongName().equals(songName)) {
-                return i.next();
+    public void playSong(int direction) {
+        ListIterator<Song> i = songLinkedList.listIterator();
+        if(direction == 10) {
+            if(!goingForward) {
+                i.next();
+                goingForward = true;
+            }
+            if(i.hasNext()) {
+                System.out.println("Now playing " + i.next());
+            }
+            else {
+                System.out.println("You are the end of playlist");
             }
         }
-        return null;
+
+        if(direction == 11) {
+            if(goingForward) {
+                i.previous();
+                goingForward = false;
+            }
+            if(i.hasPrevious()) {
+                System.out.println("Now playing " + i.previous());
+            }
+            else {
+                System.out.println("You are the start of playlist");
+            }
+        }
+        if(direction == 12) {
+            if(goingForward) {
+                i.previous();
+                System.out.println("Now playing " + i.next());
+            }
+            else {
+                i.next();
+                System.out.println("Now playing " + i.previous());
+            }
+        }
+
     }
+
 }
