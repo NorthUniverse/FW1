@@ -13,16 +13,18 @@ public class Main {
         boolean quit = false;
 
         printMenu();
+        Scanner stringScanner = new Scanner(System.in);
+        Scanner intScanner = new Scanner(System.in);
+        String albumName;
+        String songName;
+        int songLenght;
+        String playlistName;
+        Playlist searchPlaylist = null;
+        Album album;
 
         while (!quit) {
 
             int menuOption = menuOptionScanner.nextInt();
-            Scanner stringScanner = new Scanner(System.in);
-            Scanner intScanner = new Scanner(System.in);
-            String albumName;
-            String songName;
-            int songLenght;
-            String playlistName;
             switch (menuOption) {
                 case 1:
                     System.out.print("Enter album name to create: ");
@@ -39,11 +41,11 @@ public class Main {
                 case 3:
                     System.out.print("Enter album name to add the song to: ");
                     albumName = stringScanner.nextLine();
-                    Album album = jukebox.albumExists(albumName);
+                    album = jukebox.albumExists(albumName);
                     if(album != null){
                         System.out.print("Enter song name to add: ");
                         songName = stringScanner.nextLine();
-                        System.out.print("Enter song name to add: ");
+                        System.out.print("Enter song lenght ");
                         songLenght = intScanner.nextInt();
                         album.addSongToAlbum(songName, songLenght);
                     }
@@ -79,8 +81,8 @@ public class Main {
                 case 7:
                     System.out.print("Enter playlist name first! ");
                     playlistName = stringScanner.nextLine();
-                    Playlist searchPlaylist = jukebox.playlistExists((playlistName));
-                    System.out.print("Enter the song to add into the playlist");
+                    searchPlaylist = jukebox.playlistExists((playlistName));
+                    System.out.print("Enter the song to add into the playlist ");
                     songName = stringScanner.nextLine();
                     Song searchSong = jukebox.songInAlbum(songName);
                     if(searchPlaylist != null && searchSong != null) {
@@ -99,7 +101,11 @@ public class Main {
                     }
                     break;
                 case 9:
-                    quit = true;
+                    System.out.print("Select a playlist to play ");
+                    playlistName = stringScanner.nextLine();
+                    searchPlaylist = jukebox.playlistExists((playlistName));
+                    searchPlaylist.playSong();
+                    printMenu();
                     break;
                 default:
                     quit = true;
@@ -120,11 +126,8 @@ public class Main {
         System.out.println("6. Remove a Playlist ");
         System.out.println("7. Add song to Playlist ");
         System.out.println("8. Remove song from Playlist  ");
-        System.out.println("9. Choose a Playlist ");
-        System.out.println("10. Play next song in choosen playlist ");
-        System.out.println("11. Play previous song in choosen playlist ");
-        System.out.println("12. Play same song in choosen playlist ");
-        System.out.println("13. Quit ");
+        System.out.println("9. Start Playlist ");
+        System.out.println("10. Quit ");
         System.out.print("Enter Option: ");
     }
 
