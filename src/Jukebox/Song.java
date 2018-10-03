@@ -1,12 +1,15 @@
 package Jukebox;
 
 public class Song {
-    private String name;
-    private int duration;
+    private String songName;
+    private int songDuration;
 
-    public Song(String name, int duration) {
-        this.name = name;
-        this.duration = duration;
+    public Song(String songName, int songDuration) {
+        this.songName = songName;
+        this.songDuration = songDuration;
     }
 
+    public String getSongName() {
+        return songName;
+    }
 }

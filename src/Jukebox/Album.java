@@ -16,30 +16,35 @@ public class Album {
         return albumName;
     }
 
-    public addSong(String songName) {
-        if(songExists(song)) {
-            songLinkedList.add(song);
+    public void addSongToAlbum(String songName, int songDuration) {
+        Song searchSong = songExists(songName);
+        if(searchSong == null) {
+            songLinkedList.add(new Song(songName,songDuration));
+            System.out.println(songName + " has been added to " + albumName);
         }
         else {
             System.out.println(songName + " already exists in " + getAlbumName());
         }
     }
 
-    public removeSong(String songName) {
-        if(songExists(song)) {
-            songLinkedList.remove(song);
+    public void removeSongFromAlbum(String songName) {
+        Song searchSong = songExists(songName);
+        if(searchSong != null) {
+            songLinkedList.remove(searchSong);
         }
         else {
             System.out.println(songName + " does not exists in " + getAlbumName());
         }
     }
 
-    public boolean songExists(String songName) {
-        ListIterator<Song> i = songLinkedList.listIterator();
+    public Song songExists(String songName) {
+        ListIterator<Song> i = this.songLinkedList.listIterator();
         while(i.hasNext()) {
-            i.next().getSongName().equals(songName);
-            return i;
+            if(i.next().getSongName().equals(songName)) {
+                i.previous();
+                return i.next();
+            }
         }
-        return false;
+        return null;
     }
 }
