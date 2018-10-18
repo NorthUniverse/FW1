@@ -7,7 +7,7 @@ public class Saveable implements ISaveable{
     private int index;
 
     public Saveable() {
-        myArrayList = new ArrayList<String>();
+        myArrayList = new ArrayList<>();
         index = 0;
     }
 
@@ -31,14 +31,15 @@ public class Saveable implements ISaveable{
 
     @Override
     public String toString() {
+        String returnData = "";
         if(index > 0) {
             for(int i = 0; i < index; i++) {
-                System.out.println((i+1) + ". -> " + myArrayList.get(i));
+                returnData = returnData + " " + myArrayList.get(i);
             }
         }
         else {
             System.out.println("The array list is empty!");
         }
-        return null;
+        return returnData;
     }
 }

@@ -28,6 +28,10 @@ public class Main {
                     saveable.printDataFromArrayList();
                     break;
                 case 3:
+                    String toStringData = saveable.toString();
+                    System.out.println(toStringData);
+                    break;
+                case 4:
                     printMenu();
                     break;
                 default:
@@ -43,6 +47,7 @@ public class Main {
         System.out.println("0. Quit");
         System.out.println("1. Add String to ArrayList");
         System.out.println("2. Print ArrayList");
-        System.out.println("3. Print Menu\n");
+        System.out.println("3. Print ArrayList from tostring method");
+        System.out.println("4. Print Menu\n");
     }
 }
