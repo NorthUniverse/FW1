@@ -12,6 +12,7 @@ public class Main {
         scanner.nextLine();
 
         int[] array = getIntegers(count);
+        System.out.println("Entered array is: ");
         printArray(array);
         sortArray(array);
         System.out.println("Sorted array is: ");
@@ -22,7 +23,7 @@ public class Main {
     public static int[] getIntegers(int count) {
         int[] array = new int[count];
         for(int i = 0; i < array.length; i++) {
-            System.out.println("Enter the number: ");
+            System.out.println("Enter integer for array[" + i + "]: ");
             array[i] = scanner.nextInt();
             scanner.nextLine();
         }
