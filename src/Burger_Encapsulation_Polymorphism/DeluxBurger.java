@@ -1,4 +1,4 @@
-package Burger;
+package Burger_Encapsulation_Polymorphism;
 
 public class DeluxBurger extends Hamburger{
     public DeluxBurger(double price) {

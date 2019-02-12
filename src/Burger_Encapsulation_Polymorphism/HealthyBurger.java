@@ -1,9 +1,9 @@
-package Burger;
+package Burger_Encapsulation_Polymorphism;
 
 public class HealthyBurger extends Hamburger {
 
     public HealthyBurger(String meat, double price) {
-        super("Healthy Burger", "Wheat Rye", meat, price);
+        super("Healthy Burger_Encapsulation_Polymorphism", "Wheat Rye", meat, price);
     }
 
     private String healthyItem1Name;
