@@ -1,4 +1,4 @@
-package MobilePhone;
+package MobilePhone_ArrayList;
 
 public class Contact {
 
