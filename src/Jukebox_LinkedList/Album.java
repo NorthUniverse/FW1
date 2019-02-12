@@ -1,4 +1,4 @@
-package Jukebox;
+package Jukebox_LinkedList;
 
 import java.util.LinkedList;
 import java.util.ListIterator;

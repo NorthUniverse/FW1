@@ -1,4 +1,4 @@
-package House;
+package House_Composition;
 
 public class Bedroom {
     private String name;

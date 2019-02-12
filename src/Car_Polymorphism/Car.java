@@ -1,4 +1,4 @@
-package Car;
+package Car_Polymorphism;
 
 public class Car {
     private String name;

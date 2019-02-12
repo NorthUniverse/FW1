@@ -1,4 +1,4 @@
-package Jukebox;
+package Jukebox_LinkedList;
 
 public class Song {
     private String songName;

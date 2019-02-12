@@ -1,4 +1,4 @@
-package Car;
+package Car_Polymorphism;
 
 public class BMW extends Car{
     public BMW(String name, int cylinders, int doors) {
@@ -6,6 +6,6 @@ public class BMW extends Car{
     }
 
     public void startEngine() {
-        System.out.println("Starting BMW Car...");
+        System.out.println("Starting BMW Car_Polymorphism...");
     }
 }

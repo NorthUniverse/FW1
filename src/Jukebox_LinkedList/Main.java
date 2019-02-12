@@ -1,4 +1,4 @@
-package Jukebox;
+package Jukebox_LinkedList;
 
 import java.util.Scanner;
 
@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner menuOptionScanner = new Scanner(System.in);
-        System.out.println("Welcome to Jukebox: ");
-        Jukebox jukebox = new Jukebox("Jukebox");
+        System.out.println("Welcome to Jukebox_LinkedList: ");
+        Jukebox jukebox = new Jukebox("Jukebox_LinkedList");
 
         boolean quit = false;
 

@@ -1,4 +1,4 @@
-package House;
+package House_Composition;
 
 public class Wall {
     private String driection;
