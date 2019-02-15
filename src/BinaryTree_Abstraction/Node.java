@@ -18,7 +18,7 @@ public class Node extends ListItem{
     }
 
     @Override
-    ListItem prev() {
+    ListItem previous() {
         return this.leftLink;
     }
 
