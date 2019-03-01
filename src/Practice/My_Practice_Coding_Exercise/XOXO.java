@@ -1,4 +1,4 @@
-package Practice;
+package Practice.My_Practice_Coding_Exercise;
 
 public class XOXO {
     public static void main(String[] args) {

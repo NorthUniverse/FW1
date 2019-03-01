@@ -1,4 +1,4 @@
-package StringReverse;
+package Practice.My_Practice_Coding_Exercise.StringReverse;
 
 import java.util.Scanner;
 
