@@ -30,12 +30,23 @@ public class Main {
 		System.out.println("Printing Persons: ");
 		printPersons(persons);
 		System.out.println(" ");
-		System.out.println("Persons after sorting using Last Name: ");
+		System.out.println("Persons after sorting with Last Name field: ");
 		sortPersonsLastName(persons);
 		printPersons(persons);
 		System.out.println(" ");
 		System.out.println("Persons with Last Name starting with C: ");
 		printLastNameWithCs(persons);
+
+		System.out.println(" ");
+		System.out.println("Printing Persons using Lambdas: ");
+		printPersonsUsingLambdas(persons);
+		System.out.println(" ");
+		System.out.println("Persons after sorting with Last Name field using Lambdas: ");
+		sortPersonsLastNameUsingLambdas(persons);
+		printPersons(persons);
+		System.out.println(" ");
+		System.out.println("Persons with Last Name starting with C using Lambdas: ");
+		printLastNameWithCsUsingLambdas(persons);
 	}
 
 	public static void printPersons(List<Person> persons) {
@@ -55,10 +66,25 @@ public class Main {
 
 	public static void printLastNameWithCs(List<Person> persons) {
 		for(Person person : persons) {
-			if((person.getLastName().startsWith("C")) || (person.getLastName().startsWith("c"))){
+			if(person.getUpperLastName().startsWith("C")){
 				System.out.println(person.getPerson());
 			}
 		}
+	}
+
+	public static void printPersonsUsingLambdas(List<Person> persons) {
+		persons.forEach(a -> System.out.println(a.getPerson()));
+	}
+
+	public static void sortPersonsLastNameUsingLambdas(List<Person> persons) {
+		Collections.sort(persons, (Person p1, Person p2) -> p1.getLastName().compareToIgnoreCase(p2.getLastName()));
+	}
+
+	public static void printLastNameWithCsUsingLambdas(List<Person> persons) {
+		persons
+                .stream()
+                .filter(x -> x.getUpperLastName().startsWith("C"))
+                .forEach(y -> System.out.println(y.getPerson()));
 	}
 
 }
