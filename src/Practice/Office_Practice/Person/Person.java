@@ -1,9 +1,9 @@
 package Practice.Office_Practice.Person;
 
 public class Person {
-	String firstName;
-	String lastName;
-	int age;
+	private String firstName;
+	private String lastName;
+	private int age;
 
 	public Person(String firstName, String lastName, int age) {
 		this.firstName = firstName;
@@ -11,16 +11,23 @@ public class Person {
 		this.age = age;
 	}
 
-	@Override
-	public String toString() {
-		return "Person{" +
-				"firstName='" + firstName + '\'' +
-				", LastName='" + lastName + '\'' +
-				", age=" + age +
-				'}';
+	public String getFirstName() {
+		return firstName;
 	}
 
+	public String getLastName() {
+		return lastName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+    public String getUpperLastName() {
+        return lastName.toUpperCase();
+    }
+
 	public String getPerson() {
-		return ("First Name = " + this.firstName + " Last Name = " + this.lastName + " Age = " + this.age);
+		return (getFirstName() + " " + getLastName() + " " + getAge());
 	}
 }

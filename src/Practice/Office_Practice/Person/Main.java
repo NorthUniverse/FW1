@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 		Person sankeerth = new Person("Sankeerth","Kakarna", 29);
 		Person richard = new Person("Richard","McLeggon", 40);
-		Person dennis = new Person("Dennis","Richard", 30);
+		Person dennis = new Person("Dennis","Richard", 32);
 		Person mizan = new Person("Mizan","Mossain", 27);
 		Person john = new Person("John","Cunningham", 32);
 		Person lisa = new Person("Lisa","Caton", 30);
