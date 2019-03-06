@@ -1,6 +1,8 @@
 package Practice.Office_Practice.Person;
 
+import java.awt.print.Book;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -56,13 +58,16 @@ public class Main {
 	}
 
 	public static void sortPersonsLastName(List<Person> persons) {
-		Collections.sort(persons, new Comparator<Person>() {
-			@Override
-			public int compare(Person p1, Person p2) {
-				return p1.getLastName().compareToIgnoreCase(p2.getLastName());
-			}
-		});
-	}
+        for(int i = 0; i < persons.size(); i++) {
+            for(int j = i+1; j < persons.size(); j++) {
+                if (persons.get(i).getUpperLastName().compareTo(persons.get(j).getUpperLastName()) > 0) {
+                    Person temp = persons.get(i);
+                    persons.set(i, persons.get(j));
+                    persons.set(j,temp);
+                }
+            }
+        }
+    }
 
 	public static void printLastNameWithCs(List<Person> persons) {
 		for(Person person : persons) {
@@ -77,7 +82,13 @@ public class Main {
 	}
 
 	public static void sortPersonsLastNameUsingLambdas(List<Person> persons) {
-		Collections.sort(persons, (Person p1, Person p2) -> p1.getLastName().compareToIgnoreCase(p2.getLastName()));
+//		Collections.sort(persons, (Person p1, Person p2) -> p1.getLastName().compareToIgnoreCase(p2.getLastName()));
+        persons
+                .stream()
+                .sorted(Comparator.comparing((p1, p2) -> {
+                    p1.getLastName().compareToIgnoreCase(p2.getLastName());
+                }))
+                .forEach(a -> System.out.println(a.getPerson()));
 	}
 
 	public static void printLastNameWithCsUsingLambdas(List<Person> persons) {
