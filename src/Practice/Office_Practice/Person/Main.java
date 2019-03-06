@@ -1,10 +1,6 @@
 package Practice.Office_Practice.Person;
 
-import java.awt.print.Book;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -78,24 +74,31 @@ public class Main {
 	}
 
 	public static void printPersonsUsingLambdas(List<Person> persons) {
-		persons.forEach(a -> System.out.println(a.getPerson()));
+		PrintNames printEachName = (List<Person> personsInPrint) -> personsInPrint.forEach(a -> System.out.println(a.getPerson()));
+		printEachName.PrintNamesMethod(persons);
 	}
 
 	public static void sortPersonsLastNameUsingLambdas(List<Person> persons) {
-//		Collections.sort(persons, (Person p1, Person p2) -> p1.getLastName().compareToIgnoreCase(p2.getLastName()));
-        persons
-                .stream()
-                .sorted(Comparator.comparing((p1, p2) -> {
-                    p1.getLastName().compareToIgnoreCase(p2.getLastName());
-                }))
-                .forEach(a -> System.out.println(a.getPerson()));
+		MySort toSort = (List<Person> personsInLambda) -> {
+			for(int i = 0; i < personsInLambda.size(); i++) {
+				for(int j = i+1; j < personsInLambda.size(); j++) {
+					if (personsInLambda.get(i).getUpperLastName().compareTo(personsInLambda.get(j).getUpperLastName()) > 0) {
+						Person temp = personsInLambda.get(i);
+						personsInLambda.set(i, personsInLambda.get(j));
+						personsInLambda.set(j,temp);
+					}
+				}
+			}
+		};
+		toSort.myInterfaceSort(persons);
 	}
 
 	public static void printLastNameWithCsUsingLambdas(List<Person> persons) {
-		persons
-                .stream()
-                .filter(x -> x.getUpperLastName().startsWith("C"))
-                .forEach(y -> System.out.println(y.getPerson()));
+		PrintNames printEachNameWithC = (List<Person> personsInPrint) -> personsInPrint
+				.stream()
+				.filter(x -> x.getUpperLastName().startsWith("C"))
+				.forEach(y -> System.out.println(y.getPerson()));
+		printEachNameWithC.PrintNamesMethod(persons);
 	}
 
 }
