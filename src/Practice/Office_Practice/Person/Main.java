@@ -36,15 +36,15 @@ public class Main {
 		printLastNameWithCs(persons);
 
 		System.out.println(" ");
-		System.out.println("Printing Persons using Lambdas: ");
-		printPersonsUsingLambdas(persons);
+		System.out.println("Printing Persons using functional Interfaces: ");
+		printPersonsUsingFunctionalInterface(persons);
 		System.out.println(" ");
-		System.out.println("Persons after sorting with Last Name field using Lambdas: ");
-		sortPersonsLastNameUsingLambdas(persons);
+		System.out.println("Persons after sorting with Last Name field using functional Interfaces: ");
+		sortPersonsLastNameUsingFunctionalInterface(persons);
 		printPersons(persons);
 		System.out.println(" ");
-		System.out.println("Persons with Last Name starting with C using Lambdas: ");
-		printLastNameWithCsUsingLambdas(persons);
+		System.out.println("Persons with Last Name starting with C using functional Interfaces: ");
+		printLastNameWithCsUsingFunctionalInterface(persons);
 	}
 
 	public static void printPersons(List<Person> persons) {
@@ -73,32 +73,48 @@ public class Main {
 		}
 	}
 
-	public static void printPersonsUsingLambdas(List<Person> persons) {
-		PrintNames printEachName = (List<Person> personsInPrint) -> personsInPrint.forEach(a -> System.out.println(a.getPerson()));
+	public static void printPersonsUsingFunctionalInterface(List<Person> persons) {
+		PrintNames printEachName = new PrintNames() {
+			@Override
+			public void PrintNamesMethod(List<Person> persons) {
+				for(Person person : persons) {
+					System.out.println(person.getPerson());
+				}
+			}
+		};
 		printEachName.PrintNamesMethod(persons);
 	}
 
-	public static void sortPersonsLastNameUsingLambdas(List<Person> persons) {
-		MySort toSort = (List<Person> personsInLambda) -> {
-			for(int i = 0; i < personsInLambda.size(); i++) {
-				for(int j = i+1; j < personsInLambda.size(); j++) {
-					if (personsInLambda.get(i).getUpperLastName().compareTo(personsInLambda.get(j).getUpperLastName()) > 0) {
-						Person temp = personsInLambda.get(i);
-						personsInLambda.set(i, personsInLambda.get(j));
-						personsInLambda.set(j,temp);
+	public static void sortPersonsLastNameUsingFunctionalInterface(List<Person> persons) {
+	    MySort toSort = new MySort() {
+            @Override
+            public void myInterfaceSort(List<Person> personsInMethodOverride) {
+                for(int i = 0; i < personsInMethodOverride.size(); i++) {
+                    for(int j = i+1; j < personsInMethodOverride.size(); j++) {
+                        if (personsInMethodOverride.get(i).getUpperLastName().compareTo(personsInMethodOverride.get(j).getUpperLastName()) > 0) {
+                            Person temp = personsInMethodOverride.get(i);
+                            personsInMethodOverride.set(i, personsInMethodOverride.get(j));
+                            personsInMethodOverride.set(j,temp);
+                        }
+                    }
+                }
+            }
+        };
+	    toSort.myInterfaceSort(persons);
+	}
+
+	public static void printLastNameWithCsUsingFunctionalInterface(List<Person> persons) {
+		PrintNames printEachName = new PrintNames() {
+			@Override
+			public void PrintNamesMethod(List<Person> persons) {
+				for(Person person : persons) {
+					if(person.getUpperLastName().startsWith("C")){
+						System.out.println(person.getPerson());
 					}
 				}
 			}
 		};
-		toSort.myInterfaceSort(persons);
-	}
-
-	public static void printLastNameWithCsUsingLambdas(List<Person> persons) {
-		PrintNames printEachNameWithC = (List<Person> personsInPrint) -> personsInPrint
-				.stream()
-				.filter(x -> x.getUpperLastName().startsWith("C"))
-				.forEach(y -> System.out.println(y.getPerson()));
-		printEachNameWithC.PrintNamesMethod(persons);
+        printEachName.PrintNamesMethod(persons);
 	}
 
 }
