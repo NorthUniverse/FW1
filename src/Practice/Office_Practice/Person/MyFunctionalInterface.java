@@ -3,6 +3,6 @@ package Practice.Office_Practice.Person;
 import java.util.List;
 
 @FunctionalInterface
-public interface PrintNames {
-	void PrintNamesMethod(List<Person> persons);
+interface MyFuntionalInterface {
+	void myInterface(List<Person> persons);
 }

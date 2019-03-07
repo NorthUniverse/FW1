@@ -74,39 +74,39 @@ public class Main {
 	}
 
 	public static void printPersonsUsingFunctionalInterface(List<Person> persons) {
-		PrintNames printEachName = new PrintNames() {
+		MyFuntionalInterface printEachName = new MyFuntionalInterface() {
 			@Override
-			public void PrintNamesMethod(List<Person> persons) {
+			public void myInterface(List<Person> persons) {
 				for(Person person : persons) {
 					System.out.println(person.getPerson());
 				}
 			}
 		};
-		printEachName.PrintNamesMethod(persons);
+		printEachName.myInterface(persons);
 	}
 
 	public static void sortPersonsLastNameUsingFunctionalInterface(List<Person> persons) {
-	    MySort toSort = new MySort() {
-            @Override
-            public void myInterfaceSort(List<Person> personsInMethodOverride) {
-                for(int i = 0; i < personsInMethodOverride.size(); i++) {
-                    for(int j = i+1; j < personsInMethodOverride.size(); j++) {
-                        if (personsInMethodOverride.get(i).getUpperLastName().compareTo(personsInMethodOverride.get(j).getUpperLastName()) > 0) {
-                            Person temp = personsInMethodOverride.get(i);
-                            personsInMethodOverride.set(i, personsInMethodOverride.get(j));
-                            personsInMethodOverride.set(j,temp);
-                        }
-                    }
-                }
-            }
+	    MyFuntionalInterface toSort = new MyFuntionalInterface() {
+			@Override
+			public void myInterface(List<Person> personsInMethodOverride) {
+				for(int i = 0; i < personsInMethodOverride.size(); i++) {
+					for(int j = i+1; j < personsInMethodOverride.size(); j++) {
+						if (personsInMethodOverride.get(i).getUpperLastName().compareTo(personsInMethodOverride.get(j).getUpperLastName()) > 0) {
+							Person temp = personsInMethodOverride.get(i);
+							personsInMethodOverride.set(i, personsInMethodOverride.get(j));
+							personsInMethodOverride.set(j,temp);
+						}
+					}
+				}
+			}
         };
-	    toSort.myInterfaceSort(persons);
+	    toSort.myInterface(persons);
 	}
 
 	public static void printLastNameWithCsUsingFunctionalInterface(List<Person> persons) {
-		PrintNames printEachName = new PrintNames() {
+		MyFuntionalInterface printNamesWithC = new MyFuntionalInterface() {
 			@Override
-			public void PrintNamesMethod(List<Person> persons) {
+			public void myInterface(List<Person> persons) {
 				for(Person person : persons) {
 					if(person.getUpperLastName().startsWith("C")){
 						System.out.println(person.getPerson());
@@ -114,7 +114,7 @@ public class Main {
 				}
 			}
 		};
-        printEachName.PrintNamesMethod(persons);
+		printNamesWithC.myInterface(persons);
 	}
 
 }
