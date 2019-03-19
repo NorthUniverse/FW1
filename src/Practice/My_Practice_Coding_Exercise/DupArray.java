@@ -3,7 +3,7 @@ package Practice.My_Practice_Coding_Exercise;
 public class DupArray {
 
     public static void main(String[] args) {
-        int[] myArray = {1,2,2,3,4,4,};
+        int[] myArray = {1,2,2,3,4,4};
         printDups(myArray);
     }
 
