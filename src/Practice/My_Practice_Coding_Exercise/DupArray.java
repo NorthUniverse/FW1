@@ -6,7 +6,7 @@ import java.util.Map;
 public class DupArray {
 
     public static void main(String[] args) {
-        int[] myArray = {4,4,4};
+        int[] myArray = {1,1,2,3,4,4,4,4,4,1};
 		printDupsWithOccurance(myArray);
     }
 
@@ -21,23 +21,18 @@ public class DupArray {
     }
     public static void printDupsWithOccurance(int[] passedArray) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        for(int i = 0; i < passedArray.length; i++) {
-			int noOfOccurance = 1;
-            for(int j = i+1; j < passedArray.length; j++) {
-                if(passedArray[i] == passedArray[j]) {
-                    noOfOccurance++;
-                    if(map.containsKey(passedArray[j])) {
-                    	noOfOccurance++;
-					}
-                    else {
-						map.put(passedArray[i], noOfOccurance);
-					}
-                }
+        for(int i : passedArray) {
+            Integer count = map.get(i);
+            if (count == null) {
+                map.put(i, 1);
+            } else {
+                map.put(i, ++count);
             }
         }
-        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
-			System.out.println("Element " + entry.getKey() + " with no. of occurance " + entry.getValue());
-		}
+
+//        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+//			System.out.println("Element " + entry.getKey() + " with no. of occurance " + entry.getValue());
+//		}
     }
 
 
