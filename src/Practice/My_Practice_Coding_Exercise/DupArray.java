@@ -30,9 +30,9 @@ public class DupArray {
             }
         }
 
-//        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
-//			System.out.println("Element " + entry.getKey() + " with no. of occurance " + entry.getValue());
-//		}
+        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+			System.out.println("Element " + entry.getKey() + " with no. of occurance " + entry.getValue());
+		}
     }
 
 
