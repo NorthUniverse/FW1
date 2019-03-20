@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb600fb9-12db-4be1-aaf7-0507c8e1a3e2" name="Default" comment="Commit 3/19/2019">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bb600fb9-12db-4be1-aaf7-0507c8e1a3e2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/DupArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/DupArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FW1/ArrayList/GroceryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FW1/ArrayList/GroceryList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FW1/ArrayList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FW1/ArrayList/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/ArrayDups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/Fibonacci.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,14 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DupArray.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/DupArray.java">
+      <file leaf-file-name="Fibonacci.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/Fibonacci.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -84,21 +82,21 @@
         <option value="$PROJECT_DIR$/src/BinaryTree_Abstraction/Main.java" />
         <option value="$PROJECT_DIR$/src/BinaryTree_Abstraction/MyLinkedList.java" />
         <option value="$PROJECT_DIR$/src/Practice/ArrayDups.java" />
-        <option value="$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/ArrayDups.java" />
         <option value="$PROJECT_DIR$/src/Practice/Office_Practice/Person/Person.java" />
         <option value="$PROJECT_DIR$/src/Practice/Office_Practice/Person/mySort.java" />
         <option value="$PROJECT_DIR$/src/Practice/Office_Practice/Person/MySort.java" />
         <option value="$PROJECT_DIR$/src/Practice/Office_Practice/Person/PrintNames.java" />
         <option value="$PROJECT_DIR$/src/Practice/Office_Practice/Person/Main.java" />
         <option value="$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/DupArray.java" />
+        <option value="$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/ArrayDups.java" />
+        <option value="$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/Fibonacci.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -168,9 +166,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DupArray">
+  <component name="RunManager" selected="Application.Fibonacci">
     <configuration name="DupArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Practice.My_Practice_Coding_Exercise.DupArray" />
+      <module name="FW1" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Practice.My_Practice_Coding_Exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Fibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Practice.My_Practice_Coding_Exercise.Fibonacci" />
       <module name="FW1" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <extension name="coverage">
@@ -272,9 +281,11 @@
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main (2)" />
       <item itemvalue="Application.DupArray" />
+      <item itemvalue="Application.Fibonacci" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Fibonacci" />
         <item itemvalue="Application.DupArray" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
@@ -377,11 +388,25 @@
       <option name="project" value="LOCAL" />
       <updated>1551743081652</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Commit 3/19/2019">
+      <created>1553043245668</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1553043245669</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Commit 3/19/2019">
+      <created>1553043255891</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1553043255891</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -392,17 +417,17 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Run" order="8" visible="true" weight="0.26354167" />
+      <window_info anchor="right" id="Run" order="8" weight="0.5281837" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="6" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1921875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38517746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info active="true" anchor="bottom" id="Debug" order="2" visible="true" weight="0.3995749" />
+      <window_info anchor="bottom" id="Debug" order="2" visible="true" weight="0.41273326" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info id="Designer" order="3" />
@@ -772,20 +797,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/ArrayDups.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/DupArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="517">
+          <caret line="33" column="100" lean-forward="true" selection-start-line="33" selection-start-column="100" selection-end-line="33" selection-end-column="100" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/My_Practice_Coding_Exercise/Fibonacci.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -806,7 +831,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
