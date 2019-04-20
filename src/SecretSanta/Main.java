@@ -1,7 +1,7 @@
 package SecretSanta;
 
-import MobilePhone_ArrayList.MobilePhone;
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -10,77 +10,59 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Starting mobile phone: ");
-        MobilePhone mobilePhone = new MobilePhone("2000");
-
+        System.out.println("Welcome to Secret Santa Game: ");
         boolean quit = false;
-
-        printPhoneMenu();
+        printMainMenu();
 
         while(!quit) {
-
+            printMainMenu();
+            Scanner menuOptionScanner = new Scanner(System.in);
             int menuOption = menuOptionScanner.nextInt();
-            Scanner contactScanner = new Scanner(System.in);
-            String contactName;
-            String contactPhoneNumber;
             switch (menuOption) {
                 case 1:
-                    System.out.print("Enter contact name to add: ");
-                    contactName = contactScanner.nextLine();
-                    System.out.print("Enter contact phone number to add: ");
-                    contactPhoneNumber = contactScanner.nextLine();
-                    mobilePhone.addContact(contactName, contactPhoneNumber);
-                    printPhoneMenu();
+                    System.out.println("How many persons are playing this game:? ");
+                    Scanner peepsPlaying = new Scanner(System.in);
+                    int noOfPeepsPalying = peepsPlaying.nextInt();
+                    List<Person> personPlaying = new ArrayList<>();
+                    // total of 9 people playing
+
+                    for(int i = 0; i < noOfPeepsPalying; i++) {
+                        System.out.println("Enter name for person " + i);
+                        Scanner personScanner = new Scanner(System.in);
+                        String person = personScanner.nextLine();
+                        personPlaying.add(new Person(person));
+                    }
+
+                    //Part of Secret Santa Part 3 section
+
+                    System.out.println("Let's enter immediate family members of the list of people entered");
+                    for(Person eachPerson : personPlaying) {
+                        System.out.println("Does " + eachPerson.getName() + " have an immediate family member(Y/N)? ");
+                        Scanner immediateFamilyConditionScanner = new Scanner(System.in);
+                        String immediateFamilyCondition = immediateFamilyConditionScanner.nextLine();
+                        if(immediateFamilyCondition.equalsIgnoreCase("Y")) {
+                            break;
+                        } else {
+                            System.out.println("How many immediate family member does " +  );
+                            int countImmediatefamily = immediateFamilyConditionScanner.nextInt();
+                        }
+
+                    }
+
                     break;
                 case 2:
-                    System.out.print("Enter contact name to remove: ");
-                    contactName = contactScanner.nextLine();
-                    mobilePhone.removeContact(contactName);
-                    printPhoneMenu();
-                    break;
-                case 3:
-                    System.out.print("Enter contact name to edit: ");
-                    String oldName = contactScanner.nextLine();
-                    System.out.print("Enter new contact name: ");
-                    contactName = contactScanner.nextLine();
-                    System.out.print("Enter new contact phone number: ");
-                    contactPhoneNumber = contactScanner.nextLine();
-                    mobilePhone.editContact(oldName, contactName, contactPhoneNumber);
-                    printPhoneMenu();
-                    break;
-                case 4:
-                    System.out.print("Enter contact name to search: ");
-                    contactName = contactScanner.nextLine();
-                    mobilePhone.searchContact(contactName, true);
-                    printPhoneMenu();
-                    break;
-                case 5:
-                    mobilePhone.printContacts();
-                    printPhoneMenu();
-                    break;
-                case 6:
-                    printPhoneMenu();
-                    break;
-                case 7:
                     quit = true;
                     break;
                 default:
                     quit = true;
                     break;
             }
-
         }
-
     }
 
-    private static void printPhoneMenu() {
-        System.out.println("1. Add Contact ");
-        System.out.println("2. Remove Contact ");
-        System.out.println("3. Edit Contact ");
-        System.out.println("4. Find Contact  ");
-        System.out.println("5. Print Contact list ");
-        System.out.println("6. Print Menu Options ");
-        System.out.println("7. Exit ");
+    private static void printMainMenu() {
+        System.out.println("1. Play ");
+        System.out.println("2. Quit ");
         System.out.print("Enter Option: ");
     }
 

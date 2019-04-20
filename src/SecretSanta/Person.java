@@ -5,37 +5,39 @@ import java.util.List;
 public class Person {
 
     private String name;
-    private int NumberOfImmediateFamilyMembers;
-    private List<Person> immediateFamilyMembers;
+    private int numberOfImmediateFamilyMembers;
+    private List<Person> immediateFamilyMembers; //List for exclusions(immediate family menbers)
 	private boolean isSecertSanta;
     private String isSecrectSantaOf;
 
     public Person(String name) {
         this.name = name;
+        this.isSecertSanta = false;
+        this.isSecrectSantaOf = "";
     }
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public int getNumberOfImmediateFamilyMembers() {
-		return NumberOfImmediateFamilyMembers;
+		return this.numberOfImmediateFamilyMembers;
 	}
 
 	public void setNumberOfImmediateFamilyMembers(int numberOfImmediateFamilyMembers) {
-		NumberOfImmediateFamilyMembers = numberOfImmediateFamilyMembers;
+		this.numberOfImmediateFamilyMembers = numberOfImmediateFamilyMembers;
 	}
 
 	public boolean isSecertSanta() {
-		return isSecertSanta;
+		return this.isSecertSanta;
 	}
 
 	public void setSecertSanta(boolean secertSanta) {
-		isSecertSanta = secertSanta;
+		this.isSecertSanta = secertSanta;
 	}
 
 	public List<Person> getImmediateFamilyMembers() {
-		return immediateFamilyMembers;
+		return this.immediateFamilyMembers;
 	}
 
 	public void setIsSecrectSantaOf(String isSecrectSantaOf) {
