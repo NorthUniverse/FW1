@@ -36,11 +36,15 @@ public class Person {
 		this.isSecertSanta = secertSanta;
 	}
 
-	public List<Person> getImmediateFamilyMembers() {
-		return this.immediateFamilyMembers;
-	}
-
 	public void setIsSecrectSantaOf(String isSecrectSantaOf) {
 		this.isSecrectSantaOf = isSecrectSantaOf;
 	}
+
+	public void setImmediateFamilyMembers(String name) {
+        this.immediateFamilyMembers.add(new Person(name));
+    }
+
+    public List<Person> getImmediateFamilyMembers() {
+        return this.immediateFamilyMembers;
+    }
 }

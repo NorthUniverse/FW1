@@ -34,21 +34,7 @@ public class Main {
                     }
 
                     //Part of Secret Santa Part 3 section
-
-                    System.out.println("Let's enter immediate family members of the list of people entered");
-                    for(Person eachPerson : personPlaying) {
-                        System.out.println("Does " + eachPerson.getName() + " have an immediate family member(Y/N)? ");
-                        Scanner immediateFamilyConditionScanner = new Scanner(System.in);
-                        String immediateFamilyCondition = immediateFamilyConditionScanner.nextLine();
-                        if(immediateFamilyCondition.equalsIgnoreCase("Y")) {
-                            break;
-                        } else {
-                            System.out.println("How many immediate family member does " +  );
-                            int countImmediatefamily = immediateFamilyConditionScanner.nextInt();
-                        }
-
-                    }
-
+                    setImmediateFamilyMembers(personPlaying);
                     break;
                 case 2:
                     quit = true;
@@ -64,6 +50,28 @@ public class Main {
         System.out.println("1. Play ");
         System.out.println("2. Quit ");
         System.out.print("Enter Option: ");
+    }
+
+    private static void setImmediateFamilyMembers(List<Person> personPlaying) {
+        System.out.println("Let's enter immediate family members of the list of people entered");
+        for(Person eachPerson : personPlaying) {
+            System.out.println("Does " + eachPerson.getName() + " have an immediate family member(Y/N)? ");
+            Scanner immediateFamilyConditionScanner = new Scanner(System.in);
+            String immediateFamilyCondition = immediateFamilyConditionScanner.nextLine();
+            if(immediateFamilyCondition.equalsIgnoreCase("Y")) {
+                break;
+            } else {
+                System.out.println("How many immediate family member does " +  eachPerson.getName() + " have? ");
+                Scanner immediateFamilyCounterScanner = new Scanner(System.in);
+                eachPerson.setNumberOfImmediateFamilyMembers(immediateFamilyCounterScanner.nextInt());
+                for(int i = 0; i < eachPerson.getNumberOfImmediateFamilyMembers(); i++) {
+                    System.out.println("Enter the name for immediate family member ");
+                    Scanner immediateFamilyMemberScanner = new Scanner(System.in);
+                    String immediateFamilyMember = immediateFamilyConditionScanner.nextLine();
+                    eachPerson.setImmediateFamilyMembers(immediateFamilyMember);
+                }
+            }
+        }
     }
 
 }
