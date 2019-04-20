@@ -1,18 +1,19 @@
 package SecretSanta;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
 
     private String name;
-    private int numberOfImmediateFamilyMembers;
-    private List<Person> immediateFamilyMembers; //List for exclusions(immediate family menbers)
-	private boolean isSecertSanta;
+	private List<String> exclusions; //List for exclusions(immediate family menbers)
     private String isSecrectSantaOf;
+    private List<String> canGiftToList;
 
     public Person(String name) {
         this.name = name;
-        this.isSecertSanta = false;
+		exclusions = new ArrayList<>();
+		canGiftToList = new ArrayList<>();
         this.isSecrectSantaOf = "";
     }
 
@@ -20,31 +21,27 @@ public class Person {
 		return this.name;
 	}
 
-	public int getNumberOfImmediateFamilyMembers() {
-		return this.numberOfImmediateFamilyMembers;
-	}
-
-	public void setNumberOfImmediateFamilyMembers(int numberOfImmediateFamilyMembers) {
-		this.numberOfImmediateFamilyMembers = numberOfImmediateFamilyMembers;
-	}
-
-	public boolean isSecertSanta() {
-		return this.isSecertSanta;
-	}
-
-	public void setSecertSanta(boolean secertSanta) {
-		this.isSecertSanta = secertSanta;
-	}
-
 	public void setIsSecrectSantaOf(String isSecrectSantaOf) {
 		this.isSecrectSantaOf = isSecrectSantaOf;
 	}
 
-	public void setImmediateFamilyMembers(String name) {
-        this.immediateFamilyMembers.add(new Person(name));
-    }
+	public List<String> getExclusions() {
+		return this.exclusions;
+	}
 
-    public List<Person> getImmediateFamilyMembers() {
-        return this.immediateFamilyMembers;
-    }
+	public void setExclusions(String name) {
+		this.exclusions.add(name);
+	}
+
+	public List<String> getCanGiftToList() {
+		return canGiftToList;
+	}
+
+	public void setCanGiftToList(String name) {
+		this.canGiftToList.add(name);
+	}
+
+	public String getIsSecrectSantaOf() {
+		return isSecrectSantaOf;
+	}
 }
