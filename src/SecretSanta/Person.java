@@ -7,22 +7,22 @@ public class Person {
 
     private String name;
 	private List<String> exclusions; //List for exclusions(immediate family menbers)
-    private String isSecrectSantaOf;
+    private List<String> secrectSantaFor;
     private List<String> canGiftToList;
 
     public Person(String name) {
         this.name = name;
-		exclusions = new ArrayList<>();
-		canGiftToList = new ArrayList<>();
-        this.isSecrectSantaOf = null;
+		this.exclusions = new ArrayList<>();
+		this.canGiftToList = new ArrayList<>();
+        this.secrectSantaFor = new ArrayList<>();
     }
 
 	public String getName() {
 		return this.name;
 	}
 
-	public void setIsSecrectSantaOf(String isSecrectSantaOf) {
-		this.isSecrectSantaOf = isSecrectSantaOf;
+	public void setSecrectSantaFor(String secrectSantaOf) {
+		this.secrectSantaFor.add(secrectSantaOf);
 	}
 
 	public List<String> getExclusions() {
@@ -41,7 +41,7 @@ public class Person {
 		this.canGiftToList.add(name);
 	}
 
-	public String getIsSecrectSantaOf() {
-		return isSecrectSantaOf;
+	public List<String> getSecrectSantaFor() {
+		return this.secrectSantaFor;
 	}
 }

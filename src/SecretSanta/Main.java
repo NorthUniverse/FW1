@@ -14,6 +14,7 @@ public class Main {
         System.out.println("Welcome to Secret Santa Game: ");
         boolean quit = false;
         List<Person> personsPlaying = new ArrayList<>();
+        int gameCounter = 1;
 
         while (!quit) {
             try {
@@ -34,9 +35,12 @@ public class Main {
                         GameMethods.printPersons(personsPlaying);
                         break;
                     case 5:
-                        GameMethods.playSecretSanta(personsPlaying);
+                        GameMethods.setExclusions(personsPlaying);
                         break;
                     case 6:
+                        GameMethods.playSecretSanta(personsPlaying, gameCounter);
+                        break;
+                    case 7:
                         System.out.println("Ending game");
                         quit = true;
                         break;
@@ -46,7 +50,7 @@ public class Main {
                         break;
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Wrong input");
+                System.out.println("Wrong datatype for input");
             }
         }
     }
@@ -57,8 +61,9 @@ public class Main {
         System.out.println("2. Add a new person");
         System.out.println("3. Remove a person");
         System.out.println("4. Print person list");
-        System.out.println("5. Play Secret Santa");
-        System.out.println("6. Quit ");
+        System.out.println("5. Set Exclusions");
+        System.out.println("6. Play Secret Santa");
+        System.out.println("7. Quit ");
         System.out.print("Enter Option: ");
     }
 }
