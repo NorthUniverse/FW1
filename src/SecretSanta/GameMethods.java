@@ -8,95 +8,143 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GameMethods {
 
-    public static void play() {
-//        System.out.println("How many persons are playing this game? ");
-//        Scanner peepsPlaying = new Scanner(System.in);
-//        int noOfPeepsPlaying = peepsPlaying.nextInt();
-//        if (noOfPeepsPlaying < 3) {
-//            System.out.println("Atleast 3 person must play this game, returning to main menu");
+    public static void enterData(List<Person> personsPlaying) {
+        System.out.println("How many persons are playing this game? ");
+        Scanner peepsPlaying = new Scanner(System.in);
+        int noOfPeepsPlaying = peepsPlaying.nextInt();
+        if (noOfPeepsPlaying < 3) {
+            System.out.println("Atleast 3 person must play this Secret Santa game, returning to main menu");
+            return;
+        }
+        for (int i = 0; i < noOfPeepsPlaying; i++) {
+            System.out.println("Enter name for person " + (i+1));
+            Scanner personNameScanner = new Scanner(System.in);
+            String personName = personNameScanner.nextLine();
+            personsPlaying.add(new Person(personName));
+        }
+
+//        Person Dennis = new Person("Dennis");
+//        Person Oishi = new Person("Oishi");
+//        Person Rahul = new Person("Rahul");
+//        Person Sharu = new Person("Sharon");
+//        Person Omi = new Person("Rita");
+//        Person James = new Person("James");
+//
+//        personsPlaying.add(Dennis);
+//        personsPlaying.add(Oishi);
+//        personsPlaying.add(Rahul);
+//        personsPlaying.add(Sharu);
+//        personsPlaying.add(Omi);
+//        personsPlaying.add(James);
+//
+//        Dennis.setExclusions("Oishi");
+//        Dennis.setExclusions("Sharu");
+//        Oishi.setExclusions("Dennis");
+//        Oishi.setExclusions("Omi");
+//        Sharu.setExclusions("Dennis");
+//        Omi.setExclusions("Oishi");
+
+
+    }
+
+    public static void addPerson(List<Person> personsPlaying) {
+        System.out.println("");
+        System.out.println("Enter the name of person to add");
+        Scanner addPersonScanner = new Scanner(System.in);
+        String addPerson = addPersonScanner.nextLine();
+
+        for (Person eachPerson : personsPlaying) {
+            if(eachPerson.getName().equalsIgnoreCase(addPerson)) {
+                System.out.println(addPerson + " is already on the list, hence cannot add");
+                return;
+            }
+        }
+        personsPlaying.add(new Person(addPerson));
+    }
+
+    public static void removePerson(List<Person> personsPlaying) {
+        System.out.println("");
+        System.out.println("Enter the name of person to remove");
+        Scanner addPersonScanner = new Scanner(System.in);
+        String addPerson = addPersonScanner.nextLine();
+
+        for (Person eachPerson : personsPlaying) {
+            if(!eachPerson.getName().equalsIgnoreCase(addPerson)) {
+                System.out.println(addPerson + " is not on the list, hence cannot remove");
+                return;
+            } else {
+                personsPlaying.remove(eachPerson);
+            }
+        }
+
+    }
+
+    public static void printPersons(List<Person> personsPlaying) {
+        System.out.println("");
+//        if(personsPlaying.isEmpty()) {
+//            System.out.println("The list is empty");
 //            return;
 //        }
-        List<Person> personsPlaying = new ArrayList<>();
-//
-//        for (int i = 0; i < noOfPeepsPlaying; i++) {
-//            if(i==0) {
-//                System.out.println("Enter your name ");
-//            } else {
-//                System.out.println("Enter name for person " + (i));
-//            }
-//            Scanner personScanner = new Scanner(System.in);
-//            String person = personScanner.nextLine();
-//            personsPlaying.add(new Person(person));
-//        }
-//        //Part of Secret Santa Part 3 section
-//        System.out.println("Do you want to set any exclusions for each person playing this game(Y/N)? ");
-//        Scanner exclusionConditionScanner = new Scanner(System.in);
-//        String exclusionsCondition = exclusionConditionScanner.nextLine();
-//        if (exclusionsCondition.equalsIgnoreCase("Y")) {
-//            setExclusions(personsPlaying);
-//        }
+        System.out.println("Person List");
+        for (Person eachPerson : personsPlaying) {
+            System.out.println(eachPerson.getName());
+        }
+    }
 
-        Person Dennis = new Person("Dennis");
-        Person Oishi = new Person("Oishi");
-        Person Rahul = new Person("Rahul");
-        Person Sharu = new Person("Sharu");
-        Person Omi = new Person("Omi");
-        Person James = new Person("James");
+    public static void playSecretSanta(List<Person> personsPlaying) {
 
-        personsPlaying.add(Dennis);
-        personsPlaying.add(Oishi);
-        personsPlaying.add(Rahul);
-        personsPlaying.add(Sharu);
-        personsPlaying.add(Omi);
-        personsPlaying.add(James);
+        //Part of Secret Santa Part 3 section
+        System.out.println("Do you want to set any exclusions for each person playing this game(Y/N)? ");
+        Scanner exclusionConditionScanner = new Scanner(System.in);
+        String exclusionsCondition = exclusionConditionScanner.nextLine();
+        if (exclusionsCondition.equalsIgnoreCase("Y")) {
+            setExclusions(personsPlaying);
+        }
 
-        Dennis.setExclusions("Oishi");
-        Dennis.setExclusions("Sharu");
-        Oishi.setExclusions("Dennis");
-        Oishi.setExclusions("Omi");
-        Sharu.setExclusions("Dennis");
-        Omi.setExclusions("Oishi");
-
-        canGiftToPeronsListed(personsPlaying);
+        canGiftToPeronsList(personsPlaying);
         System.out.println("Starting game: ");
         System.out.println("");
 
-//        for (Person eachPerson : personsPlaying) {
-//            System.out.println(eachPerson.getName() + " can give gift to ");
-//            List<String> giftPersons = eachPerson.getCanGiftToList();
-//            for(String person : giftPersons) {
-//                System.out.println(person);
-//            }
-//            System.out.println("");
-//        }
-
-
         playGame(personsPlaying);
-        System.out.println("You have to buy gift for " + personsPlaying.get(1).getIsSecrectSantaOf());
-
-
-//        for(Person eachPerson : personsPlaying) {
-//            System.out.println("Person is " + eachPerson.getName() + " is secrest Santa for " + eachPerson.getIsSecrectSantaOf());
-//        }
+        System.out.println("You have to buy gift for " + personsPlaying.get(0).getIsSecrectSantaOf());
+        System.out.println("See all Secrest Santa(Y/N)? ");
+        Scanner viewAllConditionScanner = new Scanner(System.in);
+        String viewAllCondiiton = viewAllConditionScanner.nextLine();
+        if (viewAllCondiiton.equalsIgnoreCase("Y")) {
+            for (Person eachPerson : personsPlaying) {
+                System.out.println(eachPerson.getName() + " is the secrect santa of " + eachPerson.getIsSecrectSantaOf());
+            }
+        }
 
     }
 
     //Part of Secret Santa Part 3 section
     private static void setExclusions(List<Person> personsPlaying) {
+        boolean quitExclusions = false;
+        List<Person> copyOfPersonsPlaying = new ArrayList<>();
+        copyOfPersonsPlaying.addAll(personsPlaying);
         for (Person eachPerson : personsPlaying) {
-            System.out.println("How many Exclusions for " + eachPerson.getName());
-            Scanner exclusionPersonCountScanner = new Scanner(System.in);
-            int exclusionPersonCount = exclusionPersonCountScanner.nextInt();
-            for(int i = 0; i < exclusionPersonCount; i++) {
-                System.out.println("Enter Exclusion " + (i+1) + " for " + eachPerson.getName());
-                Scanner exclusionPersonScanner = new Scanner(System.in);
-                String exclusionPerson = exclusionPersonScanner.nextLine();
-                eachPerson.setExclusions(exclusionPerson);
+            System.out.println("Exclusions options for " + eachPerson.getName());
+            while(!quitExclusions) {
+                System.out.println("0. Quit Exclusions for " + eachPerson.getName());
+                for (int i = 0; i < copyOfPersonsPlaying.size(); i++) {
+                    if(!eachPerson.getName().equalsIgnoreCase(copyOfPersonsPlaying.get(i).getName())) {
+                        System.out.println((i) + ". " + copyOfPersonsPlaying.get(i).getName());
+                    }
+                }
+                System.out.println("");
+                Scanner exclusionOptiontScanner = new Scanner(System.in);
+                int exclusionOption = exclusionOptiontScanner.nextInt();
+                if(exclusionOption == 0) {
+                    quitExclusions = true;
+                    break;
+                }
+                copyOfPersonsPlaying.remove(exclusionOption);
             }
         }
     }
 
-    private static void canGiftToPeronsListed(List<Person> personsPlaying) {
+    private static void canGiftToPeronsList(List<Person> personsPlaying) {
         List<Person> copyOfPersonsPlaying = new ArrayList<>();
         copyOfPersonsPlaying.addAll(personsPlaying);
         for (Person eachPerson : personsPlaying) {
@@ -111,9 +159,9 @@ public class GameMethods {
     private static void playGame(List<Person> personsPlaying) {
         String secrectSanta = null;
         for(Person eachPerson : personsPlaying) {
-            int randomElementIndex = ThreadLocalRandom.current().nextInt(eachPerson.getCanGiftToList().size());
+            int randomIndex = ThreadLocalRandom.current().nextInt(eachPerson.getCanGiftToList().size());
             List<String> canGiftTo = eachPerson.getCanGiftToList();
-            secrectSanta = canGiftTo.get(randomElementIndex);
+            secrectSanta = canGiftTo.get(randomIndex);
             eachPerson.setIsSecrectSantaOf(secrectSanta);
             for (Person eachPersonAgain : personsPlaying) {
                 if(eachPersonAgain.getCanGiftToList().contains(secrectSanta)) {

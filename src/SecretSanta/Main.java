@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
 
@@ -14,17 +13,30 @@ public class Main {
 
         System.out.println("Welcome to Secret Santa Game: ");
         boolean quit = false;
+        List<Person> personsPlaying = new ArrayList<>();
 
-        while(!quit) {
+        while (!quit) {
             try {
                 printMainMenu();
                 Scanner menuOptionScanner = new Scanner(System.in);
                 int menuOption = menuOptionScanner.nextInt();
                 switch (menuOption) {
                     case 1:
-                        GameMethods.play();
+                        GameMethods.enterData(personsPlaying);
                         break;
                     case 2:
+                        GameMethods.addPerson(personsPlaying);
+                        break;
+                    case 3:
+                        GameMethods.removePerson(personsPlaying);
+                        break;
+                    case 4:
+                        GameMethods.printPersons(personsPlaying);
+                        break;
+                    case 5:
+                        GameMethods.playSecretSanta(personsPlaying);
+                        break;
+                    case 6:
                         System.out.println("Ending game");
                         quit = true;
                         break;
@@ -33,17 +45,20 @@ public class Main {
                         quit = true;
                         break;
                 }
-            } catch(InputMismatchException e) {
-                System.out.println("Wrong input, please enter option 1 or 2: ");
+            } catch (InputMismatchException e) {
+                System.out.println("Wrong input");
             }
         }
     }
 
     private static void printMainMenu() {
-        System.out.println("");
-        System.out.println("Main Menu");
-        System.out.println("1. Play Secrect Santa");
-        System.out.println("2. Quit ");
+        System.out.println("\nMain Menu");
+        System.out.println("1. Enter Initial Person Data");
+        System.out.println("2. Add a new person");
+        System.out.println("3. Remove a person");
+        System.out.println("4. Print person list");
+        System.out.println("5. Play Secret Santa");
+        System.out.println("6. Quit ");
         System.out.print("Enter Option: ");
     }
 }

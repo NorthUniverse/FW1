@@ -101,7 +101,7 @@ public class Main {
                     }
                     break;
                 case 9:
-                    System.out.print("Select a playlist to play ");
+                    System.out.print("Select a playlist to playSecretSanta ");
                     playlistName = stringScanner.nextLine();
                     searchPlaylist = jukebox.playlistExists((playlistName));
                     searchPlaylist.playSong();

@@ -14,7 +14,7 @@ public class Person {
         this.name = name;
 		exclusions = new ArrayList<>();
 		canGiftToList = new ArrayList<>();
-        this.isSecrectSantaOf = "";
+        this.isSecrectSantaOf = null;
     }
 
 	public String getName() {
