@@ -9,40 +9,40 @@ import java.util.concurrent.ThreadLocalRandom;
 public class GameMethods {
 
     public static void enterData(List<Person> personsPlaying) {
-        System.out.println("How many persons are playing this game? ");
-        Scanner peepsPlaying = new Scanner(System.in);
-        int noOfPeepsPlaying = peepsPlaying.nextInt();
-        if (noOfPeepsPlaying < 3) {
-            System.out.println("Atleast 3 person must play this Secret Santa game, returning to main menu");
-            return;
-        }
-        for (int i = 0; i < noOfPeepsPlaying; i++) {
-            System.out.println("Enter name for person " + (i+1));
-            Scanner personNameScanner = new Scanner(System.in);
-            String personName = personNameScanner.nextLine();
-            personsPlaying.add(new Person(personName));
-        }
+//        System.out.println("How many persons are playing this game? ");
+//        Scanner peepsPlaying = new Scanner(System.in);
+//        int noOfPeepsPlaying = peepsPlaying.nextInt();
+//        if (noOfPeepsPlaying < 3) {
+//            System.out.println("Atleast 3 person must play this Secret Santa game, returning to main menu");
+//            return;
+//        }
+//        for (int i = 0; i < noOfPeepsPlaying; i++) {
+//            System.out.println("Enter name for person " + (i+1));
+//            Scanner personNameScanner = new Scanner(System.in);
+//            String personName = personNameScanner.nextLine();
+//            personsPlaying.add(new Person(personName));
+//        }
 
-//        Person Dennis = new Person("Dennis");
-//        Person Oishi = new Person("Oishi");
-//        Person Rahul = new Person("Rahul");
-//        Person Sharu = new Person("Sharon");
-//        Person Omi = new Person("Rita");
-//        Person James = new Person("James");
-//
-//        personsPlaying.add(Dennis);
-//        personsPlaying.add(Oishi);
-//        personsPlaying.add(Rahul);
-//        personsPlaying.add(Sharu);
-//        personsPlaying.add(Omi);
-//        personsPlaying.add(James);
-//
-//        Dennis.setExclusions("Oishi");
-//        Dennis.setExclusions("Sharu");
-//        Oishi.setExclusions("Dennis");
-//        Oishi.setExclusions("Omi");
-//        Sharu.setExclusions("Dennis");
-//        Omi.setExclusions("Oishi");
+        Person Dennis = new Person("Dennis");
+        Person Oishi = new Person("Oishi");
+        Person Rahul = new Person("Rahul");
+        Person Sharu = new Person("Sharon");
+        Person Omi = new Person("Rita");
+        Person James = new Person("James");
+
+        personsPlaying.add(Dennis);
+        personsPlaying.add(Oishi);
+        personsPlaying.add(Rahul);
+        personsPlaying.add(Sharu);
+        personsPlaying.add(Omi);
+        personsPlaying.add(James);
+
+        Dennis.setExclusions("Oishi");
+        Dennis.setExclusions("Sharu");
+        Oishi.setExclusions("Dennis");
+        Oishi.setExclusions("Omi");
+        Sharu.setExclusions("Dennis");
+        Omi.setExclusions("Oishi");
 
 
     }
@@ -81,10 +81,10 @@ public class GameMethods {
 
     public static void printPersons(List<Person> personsPlaying) {
         System.out.println("");
-//        if(personsPlaying.isEmpty()) {
-//            System.out.println("The list is empty");
-//            return;
-//        }
+        if(personsPlaying.isEmpty()) {
+            System.out.println("The list is empty");
+            return;
+        }
         System.out.println("Person List");
         for (Person eachPerson : personsPlaying) {
             System.out.println(eachPerson.getName());
@@ -121,11 +121,11 @@ public class GameMethods {
     //Part of Secret Santa Part 3 section
     private static void setExclusions(List<Person> personsPlaying) {
         boolean quitExclusions = false;
-        List<Person> copyOfPersonsPlaying = new ArrayList<>();
-        copyOfPersonsPlaying.addAll(personsPlaying);
         for (Person eachPerson : personsPlaying) {
             System.out.println("Exclusions options for " + eachPerson.getName());
             while(!quitExclusions) {
+                List<Person> copyOfPersonsPlaying = new ArrayList<>();
+                copyOfPersonsPlaying.addAll(personsPlaying);
                 System.out.println("0. Quit Exclusions for " + eachPerson.getName());
                 for (int i = 0; i < copyOfPersonsPlaying.size(); i++) {
                     if(!eachPerson.getName().equalsIgnoreCase(copyOfPersonsPlaying.get(i).getName())) {
@@ -140,6 +140,7 @@ public class GameMethods {
                     break;
                 }
                 eachPerson.setExclusions(copyOfPersonsPlaying.get(exclusionOption).getName());
+                System.out.println(copyOfPersonsPlaying.get(exclusionOption).getName() + " has been added as exclusion for " + eachPerson.getName());
                 copyOfPersonsPlaying.remove(exclusionOption);
             }
         }
