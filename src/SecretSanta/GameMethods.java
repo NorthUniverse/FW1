@@ -139,6 +139,7 @@ public class GameMethods {
                     quitExclusions = true;
                     break;
                 }
+                eachPerson.setExclusions(copyOfPersonsPlaying.get(exclusionOption).getName());
                 copyOfPersonsPlaying.remove(exclusionOption);
             }
         }
