@@ -112,32 +112,32 @@ public class GameMethods {
             // same person can be secret santa only after 3 years
 
             List<String> pastSecretSantaList = eachPerson.getSecrectSantaFor();
-//            if (pastSecretSantaList.size() == 1) {
-//                boolean loopOut = false;
-//                while (!loopOut) {
-//                    if (secrectSanta.equalsIgnoreCase(pastSecretSantaList.get(0))) {
-//                        randomIndex = getRandomNumberInts(arraySize);
-//                        secrectSanta = canGiftTo.get(randomIndex);
-//                    } else {
-//                        loopOut = true;
-//                        break;
-//                    }
-//                }
-//            }
-//            if (pastSecretSantaList.size() > 1) {
-//                Collections.reverse(pastSecretSantaList);
-//                boolean loopOut = false;
-//                while (!loopOut) {
-//                    if ((secrectSanta.equalsIgnoreCase(pastSecretSantaList.get(0))) || (secrectSanta.equalsIgnoreCase(pastSecretSantaList.get(1)))) {
-//                        randomIndex = getRandomNumberInts(arraySize);
-//                        secrectSanta = canGiftTo.get(randomIndex);
-//                    } else {
-//                        loopOut = true;
-//                        Collections.reverse(pastSecretSantaList);
-//                        break;
-//                    }
-//                }
-//            }
+            if (pastSecretSantaList.size() == 1) {
+                boolean loopOut = false;
+                while (!loopOut) {
+                    if (secrectSanta.equalsIgnoreCase(pastSecretSantaList.get(0))) {
+                        randomIndex = getRandomNumberInts(arraySize);
+                        secrectSanta = canGiftTo.get(randomIndex);
+                    } else {
+                        loopOut = true;
+                        break;
+                    }
+                }
+            }
+            if (pastSecretSantaList.size() > 1) {
+                Collections.reverse(pastSecretSantaList);
+                boolean loopOut = false;
+                while (!loopOut) {
+                    if ((secrectSanta.equalsIgnoreCase(pastSecretSantaList.get(0))) || (secrectSanta.equalsIgnoreCase(pastSecretSantaList.get(1)))) {
+                        randomIndex = getRandomNumberInts(arraySize);
+                        secrectSanta = canGiftTo.get(randomIndex);
+                    } else {
+                        loopOut = true;
+                        Collections.reverse(pastSecretSantaList);
+                        break;
+                    }
+                }
+            }
             eachPerson.setSecrectSantaFor(secrectSanta);
             System.out.println(pastSecretSantaList.size());
 
@@ -229,5 +229,78 @@ public class GameMethods {
                 }
             }
         }
+    }
+
+
+    public static void playSecretSantaOldMethod(List<Person> personsPlaying) {
+
+        canGiftToPeronsList(personsPlaying);
+        System.out.println("\nStarting game: \n");
+
+
+        String secrectSanta = null;
+        for (Person eachPerson : personsPlaying) {
+            List<String> canGiftTo = eachPerson.getCanGiftToList();
+            int arraySize = canGiftTo.size();
+            arraySize--;
+            int randomIndex = getRandomNumberInts(arraySize);
+            secrectSanta = canGiftTo.get(randomIndex);
+
+            // same person can be secret santa only after 3 years logic
+
+            List<String> pastSecretSantaList = eachPerson.getSecrectSantaFor();
+            if (pastSecretSantaList.size() == 1) {
+                boolean loopOut = false;
+                while (!loopOut) {
+                    if (secrectSanta.equalsIgnoreCase(pastSecretSantaList.get(0))) {
+                        randomIndex = getRandomNumberInts(arraySize);
+                        secrectSanta = canGiftTo.get(randomIndex);
+                    } else {
+                        loopOut = true;
+                        break;
+                    }
+                }
+            }
+            if (pastSecretSantaList.size() > 1) {
+                Collections.reverse(pastSecretSantaList);
+                boolean loopOut = false;
+                while (!loopOut) {
+                    if ((secrectSanta.equalsIgnoreCase(pastSecretSantaList.get(0))) || (secrectSanta.equalsIgnoreCase(pastSecretSantaList.get(1)))) {
+                        randomIndex = getRandomNumberInts(arraySize);
+                        secrectSanta = canGiftTo.get(randomIndex);
+                    } else {
+                        loopOut = true;
+                        Collections.reverse(pastSecretSantaList);
+                        break;
+                    }
+                }
+            }
+            eachPerson.setSecrectSantaFor(secrectSanta);
+            System.out.println(pastSecretSantaList.size());
+
+            for (Person eachPersonAgain : personsPlaying) {
+                if (eachPersonAgain.getCanGiftToList().contains(secrectSanta)) {
+                    List<String> canGiftToPersons = eachPersonAgain.getCanGiftToList();
+                    canGiftToPersons.remove(secrectSanta);
+                }
+            }
+            System.out.println(eachPerson.getName());
+            System.out.println("Secret Santa List: ");
+            List<String> secretSantaList = eachPerson.getSecrectSantaFor();
+            for (String secrectSantaP : secretSantaList) {
+                System.out.print(secrectSantaP + " ");
+            }
+            System.out.println("");
+        }
+        System.out.println("You have to buy gift for " + personsPlaying.get(0).getSecrectSantaFor().get(personsPlaying.get(0).getSecrectSantaFor().size()-1) + "\n");
+        System.out.println("See all Secrest Santa game results(Y/N)? ");
+        Scanner viewAllConditionScanner = new Scanner(System.in);
+        String viewAllCondiiton = viewAllConditionScanner.nextLine();
+        if (viewAllCondiiton.equalsIgnoreCase("Y")) {
+            for (Person eachPerson : personsPlaying) {
+                System.out.println(eachPerson.getName() + " is the secrect santa of " + eachPerson.getSecrectSantaFor().get(eachPerson.getSecrectSantaFor().size()-1));
+            }
+        }
+
     }
 }
