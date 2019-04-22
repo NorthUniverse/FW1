@@ -14,7 +14,6 @@ public class Main {
         System.out.println("Welcome to Secret Santa Game: ");
         boolean quit = false;
         List<Person> personsPlaying = new ArrayList<>();
-        int gameCounter = 1;
 
         while (!quit) {
             try {
@@ -38,7 +37,7 @@ public class Main {
                         GameMethods.setExclusions(personsPlaying);
                         break;
                     case 6:
-                        GameMethods.playSecretSanta(personsPlaying, gameCounter);
+                        GameMethods.playSecretSanta(personsPlaying);
                         break;
                     case 7:
                         System.out.println("Ending game");
