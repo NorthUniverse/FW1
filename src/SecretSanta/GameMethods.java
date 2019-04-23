@@ -34,6 +34,9 @@ public class GameMethods {
         Person Sharon = new Person("Sharon");
         Person Rita = new Person("Rita");
         Person James = new Person("James");
+        Person Russel = new Person("Russel");
+        Person Nancy = new Person("Nancy");
+        Person John = new Person("John");
 
         personsPlaying.add(Dennis);
         personsPlaying.add(Oishi);
@@ -41,6 +44,9 @@ public class GameMethods {
         personsPlaying.add(Sharon);
         personsPlaying.add(Rita);
         personsPlaying.add(James);
+        personsPlaying.add(Russel);
+        personsPlaying.add(Nancy);
+        personsPlaying.add(John);
 
         Dennis.setExclusions("Oishi");
         Dennis.setExclusions("Sharon");
@@ -108,29 +114,26 @@ public class GameMethods {
 			for (Person eachPerson : personsPlaying) {
 				List<String> pastSecretSantaList = eachPerson.getSecrectSantaFor();
 				Collections.reverse(pastSecretSantaList);
-				if (
-				        (eachPerson.getName().equalsIgnoreCase(pastSecretSantaList.get(0)))
-                || (eachPerson.getExclusions().contains(pastSecretSantaList.get(0)))
-                        )
-				{ // Person is secret santa for himself/herself
+				if ((eachPerson.getName().equalsIgnoreCase(pastSecretSantaList.get(0))) // Person is secret santa for himself/herself
+                || (eachPerson.getExclusions().contains(pastSecretSantaList.get(0)))  // Setting exclusions
+                        ) {
 					shuffleFlag = true;
 				}
+                // same person can be secret santa only after 3 years
+                else if (pastSecretSantaList.size() > 1) {
+                    if (pastSecretSantaList.get(0).equalsIgnoreCase(pastSecretSantaList.get(1))) {
+                        shuffleFlag = true;
+                    }
+                }
+                else if (pastSecretSantaList.size() > 2) {
+                    if (pastSecretSantaList.get(0).equalsIgnoreCase(pastSecretSantaList.get(2))) {
+                        shuffleFlag = true;
+                    }
+                }
 				else { // Person is secret santa for himself/herself
 					loopExitFlag = true;
 					count++;
 				}
-
-//				// same person can be secret santa only after 3 years
-//				if (pastSecretSantaList.size() == 1) {
-//					if (pastSecretSantaList.get(0).equalsIgnoreCase(pastSecretSantaList.get(1))) {
-//						shuffleFlag = true;
-//					}
-//				}
-//				if (pastSecretSantaList.size() > 1) {
-//					if (pastSecretSantaList.get(0).equalsIgnoreCase(pastSecretSantaList.get(2))) {
-//						shuffleFlag = true;
-//					}
-//				}
 				Collections.reverse(pastSecretSantaList);
 			}
 			if(shuffleFlag) {
