@@ -5,17 +5,17 @@ import java.util.List;
 
 public class Person {
 
-    private String name;
+	private String name;
 	private List<String> exclusions; //List for exclusions(immediate family menbers)
-    private List<String> secrectSantaFor;
-    private List<String> canGiftToList;
+	private List<String> secrectSantaFor;
+	private List<String> canGiftToList;
 
-    public Person(String name) {
-        this.name = name;
+	public Person(String name) {
+		this.name = name;
 		this.exclusions = new ArrayList<>();
 		this.canGiftToList = new ArrayList<>();
-        this.secrectSantaFor = new ArrayList<>();
-    }
+		this.secrectSantaFor = new ArrayList<>();
+	}
 
 	public String getName() {
 		return this.name;

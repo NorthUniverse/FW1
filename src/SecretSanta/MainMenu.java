@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class MainMenu implements Runnable{
+public class MainMenu implements Runnable {
 
 	@Override
 	public void run() {
