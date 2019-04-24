@@ -178,8 +178,8 @@ public class GameMethods {
         System.out.println("You have to buy gift for " + personsPlaying.get(0).getSecrectSantaFor().get(personsPlaying.get(0).getSecrectSantaFor().size()-1) + "\n");
         System.out.println("See all Secret Santa game results(Y/N)? ");
         Scanner viewAllConditionScanner = new Scanner(System.in);
-        String viewAllCondiiton = viewAllConditionScanner.nextLine();
-        if (viewAllCondiiton.equalsIgnoreCase("Y")) {
+        String viewAllCondititon = viewAllConditionScanner.nextLine();
+        if (viewAllCondititon.equalsIgnoreCase("Y")) {
             for (Person eachPerson : personsPlaying) {
                 System.out.println(eachPerson.getName() + " is the secrect santa of " + eachPerson.getSecrectSantaFor().get(eachPerson.getSecrectSantaFor().size()-1));
             }
