@@ -158,8 +158,8 @@ public class GameMethods {
 			// Condition to exit loop
 			if(loopExitFlag && (count  == personsPlaying.size())) {
 				int pastSecretSantaListSize = 0;
-				for (Person eachperson : personsPlaying) {
-					pastSecretSantaListSize = eachperson.getSecrectSantaFor().size();
+				for (Person eachPerson : personsPlaying) {
+					pastSecretSantaListSize = eachPerson.getSecrectSantaFor().size();
 				}
 				if(pastSecretSantaListSize == 2) {
 					if(loopExitFlag && (count1 == personsPlaying.size())) {
@@ -176,7 +176,7 @@ public class GameMethods {
 		}
 
         System.out.println("You have to buy gift for " + personsPlaying.get(0).getSecrectSantaFor().get(personsPlaying.get(0).getSecrectSantaFor().size()-1) + "\n");
-        System.out.println("See all Secrest Santa game results(Y/N)? ");
+        System.out.println("See all Secret Santa game results(Y/N)? ");
         Scanner viewAllConditionScanner = new Scanner(System.in);
         String viewAllCondiiton = viewAllConditionScanner.nextLine();
         if (viewAllCondiiton.equalsIgnoreCase("Y")) {
