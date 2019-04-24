@@ -121,7 +121,7 @@ public class GameMethods {
 				else {
 					loopExitFlag = true;
 					count++;
-					// Secrect Sanat Patr 2: same person can be secret santa only after 3 years
+					// Secrect Santa Patr 2: same person can be secret santa only after 3 years
 					if (pastSecretSantaList.size() == 2) {
 						loopExitFlag = false;
 						if (pastSecretSantaList.get(0).equalsIgnoreCase(pastSecretSantaList.get(1))) {
@@ -145,10 +145,10 @@ public class GameMethods {
 			}
 			if(shuffleFlag) {
 				for (Person eachPerson : personsPlaying) {
-				    List<String> secrectSantaList = eachPerson.getSecrectSantaFor();
-					Collections.reverse(secrectSantaList);
-                    secrectSantaList.remove(0);
-					Collections.reverse(secrectSantaList);
+				    List<String> secretSantaList = eachPerson.getSecrectSantaFor();
+					Collections.reverse(secretSantaList);
+					secretSantaList.remove(0);
+					Collections.reverse(secretSantaList);
 				}
 				shuffleAndAssignSecretSanta(personsPlaying);
 				shuffleFlag = false;
