@@ -111,28 +111,38 @@ public class GameMethods {
 		boolean loopExitFlag = false;
 		while(!loopExitFlag) {
             int count = 1;
+			int count1 = 1;
+			int count2 = 1;
 			for (Person eachPerson : personsPlaying) {
 				List<String> pastSecretSantaList = eachPerson.getSecrectSantaFor();
 				Collections.reverse(pastSecretSantaList);
 				if ((eachPerson.getName().equalsIgnoreCase(pastSecretSantaList.get(0))) // Person is secret santa for himself/herself
-                || (eachPerson.getExclusions().contains(pastSecretSantaList.get(0)))  // Setting exclusions
+                || (eachPerson.getExclusions().contains(pastSecretSantaList.get(0)))  // Checking exclusions
                         ) {
 					shuffleFlag = true;
 				}
-                // same person can be secret santa only after 3 years
-                else if (pastSecretSantaList.size() > 1) {
-                    if (pastSecretSantaList.get(0).equalsIgnoreCase(pastSecretSantaList.get(1))) {
-                        shuffleFlag = true;
-                    }
-                }
-                else if (pastSecretSantaList.size() > 2) {
-                    if (pastSecretSantaList.get(0).equalsIgnoreCase(pastSecretSantaList.get(2))) {
-                        shuffleFlag = true;
-                    }
-                }
-				else { // Person is secret santa for himself/herself
+				else {
 					loopExitFlag = true;
 					count++;
+					// same person can be secret santa only after 3 years
+					if (pastSecretSantaList.size() == 2) {
+						loopExitFlag = false;
+						if (pastSecretSantaList.get(0).equalsIgnoreCase(pastSecretSantaList.get(1))) {
+							shuffleFlag = true;
+						} else {
+							loopExitFlag = true;
+							count1++;
+						}
+					}
+					if (pastSecretSantaList.size() > 2) {
+						loopExitFlag = false;
+						if ((pastSecretSantaList.get(0).equalsIgnoreCase(pastSecretSantaList.get(1))) || ((pastSecretSantaList.get(0).equalsIgnoreCase(pastSecretSantaList.get(2))))) {
+							shuffleFlag = true;
+						} else {
+							loopExitFlag = true;
+							count2++;
+						}
+					}
 				}
 				Collections.reverse(pastSecretSantaList);
 			}
@@ -149,6 +159,20 @@ public class GameMethods {
 			}
 
 			if(loopExitFlag && (count  == personsPlaying.size())) {
+				int pastSecretSantaListSize = 0;
+				for (Person eachperson : personsPlaying) {
+					pastSecretSantaListSize = eachperson.getSecrectSantaFor().size();
+				}
+				if(pastSecretSantaListSize == 2) {
+					if(loopExitFlag && (count1 == personsPlaying.size())) {
+						break;
+					}
+				}
+				if(pastSecretSantaListSize > 2) {
+					if(loopExitFlag && (count2 == personsPlaying.size())) {
+						break;
+					}
+				}
 				break;
 			}
 		}
