@@ -4,7 +4,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class GameMethodsTest {
 
@@ -17,24 +18,14 @@ public class GameMethodsTest {
 		System.out.println("Running test for GameMethods class... ");
 	}
 
-//	@org.junit.Test
-//	public void enterData() {
-//		String input0 = "3";
-//		ByteArrayInputStream in0 = new ByteArrayInputStream(input0.getBytes());
-//		System.setIn(in0);
-
-//		String input1 = "Dog";
-//		InputStream in1 = new ByteArrayInputStream(input1.getBytes());
-//		System.setIn(in1);
-//		String input2 = "Cat";
-//		InputStream in2 = new ByteArrayInputStream(input2.getBytes());
-//		System.setIn(in2);
-//		String input3 = "Mouse";
-//		InputStream in3 = new ByteArrayInputStream(input3.getBytes());
-//		System.setIn(in3);
-//		GameMethods.enterData(personsPlaying);
-//		assertEquals(3, personsPlaying.size());
-//	}
+	@org.junit.Test
+	public void enterData() {
+		String input0 = "0";
+		ByteArrayInputStream in0 = new ByteArrayInputStream(input0.getBytes());
+		System.setIn(in0);
+		GameMethods.enterData(personsPlaying);
+		assertEquals(0, personsPlaying.size());
+	}
 
 	@org.junit.Test
 	public void addPerson() {
@@ -124,10 +115,16 @@ public class GameMethodsTest {
 		int secrectSanataSizeBeforeShuffle = personsPlaying.get(0).getSecrectSantaFor().size();
 		GameMethods.shuffleAndAssignSecretSanta(personsPlaying);
 		int secrectSanataSizeAfterShuffle = personsPlaying.get(0).getSecrectSantaFor().size();
-		assertNotEquals(secrectSanataSizeBeforeShuffle,secrectSanataSizeAfterShuffle);
+		assertNotEquals(secrectSanataSizeBeforeShuffle, secrectSanataSizeAfterShuffle);
 	}
 
 	@org.junit.Test
 	public void setExclusions() {
+		personsPlaying.add(new Person("Robert"));
+		String choiceInput = "0";
+		InputStream choiceInputStream = new ByteArrayInputStream(choiceInput.getBytes());
+		System.setIn(choiceInputStream);
+		GameMethods.setExclusions(personsPlaying);
+		assertEquals(0, personsPlaying.get(0).getExclusions().size());
 	}
 }

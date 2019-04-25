@@ -4,42 +4,42 @@ import static org.junit.Assert.assertEquals;
 
 public class PersonTest {
 
-	private Person tim;
+	private Person Jon;
 
 	@org.junit.Before
 	public void before() {
-		tim = new Person("Tim");
+		Jon = new Person("Jon");
 		System.out.println("Running test for person class... ");
 	}
 
 	@org.junit.Test
 	public void getName() {
-		assertEquals(tim.getName(),"Tim");
+		assertEquals(Jon.getName(), "Jon");
 	}
 
 	@org.junit.Test
 	public void setSecrectSantaFor() {
-		tim.setSecrectSantaFor("Jane");
-		assertEquals(tim.getSecrectSantaFor().get(0),"Jane");
+		Jon.setSecrectSantaFor("Daenerys");
+		assertEquals(Jon.getSecrectSantaFor().get(0), "Daenerys");
 	}
 
 	@org.junit.Test
 	public void getExclusions() {
-		tim.setExclusions("Jane");
-		String exclusion = tim.getExclusions().get(0);
-		assertEquals(exclusion,"Jane");
+		Jon.setExclusions("Daenerys");
+		String exclusion = Jon.getExclusions().get(0);
+		assertEquals(exclusion, "Daenerys");
 	}
 
 	@org.junit.Test
 	public void setExclusions() {
-		tim.setExclusions("Jane");
-		assertEquals(tim.getExclusions().get(0),"Jane");
+		Jon.setExclusions("Daenerys");
+		assertEquals(Jon.getExclusions().get(0), "Daenerys");
 	}
 
 	@org.junit.Test
 	public void getSecrectSantaFor() {
-		tim.setSecrectSantaFor("Jane");
-		String secrectSanta = tim.getSecrectSantaFor().get(0);
-		assertEquals(secrectSanta,"Jane");
+		Jon.setSecrectSantaFor("Daenerys");
+		String secrectSanta = Jon.getSecrectSantaFor().get(0);
+		assertEquals(secrectSanta, "Daenerys");
 	}
 }
