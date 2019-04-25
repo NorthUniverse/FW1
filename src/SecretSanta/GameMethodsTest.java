@@ -51,7 +51,7 @@ public class GameMethodsTest {
 
 	@org.junit.Test
 	public void printPersons() {
-		String input = "Ned";
+		String input = "Targaryen";
 		InputStream inputStream = new ByteArrayInputStream(input.getBytes());
 		System.setIn(inputStream);
 		GameMethods.addPerson(personsPlaying);
@@ -59,7 +59,7 @@ public class GameMethodsTest {
 		PrintStream printStream = new PrintStream(outputStream);
 		System.setOut(printStream);
 		GameMethods.printPersons(personsPlaying);
-		assertEquals("\nPerson List:\r\nNed\r\n", outputStream.toString());
+		assertEquals("\nPerson List:\r\nTargaryen\r\n", outputStream.toString());
 		PrintStream originalOut = System.out;
 		System.setOut(originalOut);
 	}
