@@ -26,35 +26,6 @@ public class GameMethods {
             String personName = personNameScanner.nextLine();
             personsPlaying.add(new Person(personName));
         }
-
-//		Person Dennis = new Person("Dennis");
-//		Person Oishi = new Person("Oishi");
-//		Person Rahul = new Person("Rahul");
-//		Person Sharon = new Person("Sharon");
-//		Person Rita = new Person("Rita");
-//		Person James = new Person("James");
-//		Person Russel = new Person("Russel");
-//		Person Nancy = new Person("Nancy");
-//		Person John = new Person("John");
-//
-//		personsPlaying.add(Dennis);
-//		personsPlaying.add(Oishi);
-//		personsPlaying.add(Rahul);
-//		personsPlaying.add(Sharon);
-//		personsPlaying.add(Rita);
-//		personsPlaying.add(James);
-//		personsPlaying.add(Russel);
-//		personsPlaying.add(Nancy);
-//		personsPlaying.add(John);
-//
-//		Dennis.setExclusions("Oishi");
-//		Dennis.setExclusions("Sharon");
-//		Oishi.setExclusions("Dennis");
-//		Oishi.setExclusions("Rita");
-//		Sharon.setExclusions("Dennis");
-//		Rita.setExclusions("Oishi");
-
-
 	}
 
 	public static void addPerson(List<Person> personsPlaying) {
