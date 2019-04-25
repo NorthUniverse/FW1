@@ -8,49 +8,51 @@ import java.util.Scanner;
 public class GameMethods {
 
 	public static void enterData(List<Person> personsPlaying) {
-//        System.out.println("How many persons are playing this game? ");
-//        Scanner peepsPlaying = new Scanner(System.in);
-//        int noOfPeepsPlaying = peepsPlaying.nextInt();
-//        if (noOfPeepsPlaying < 3) {
-//            System.out.println("Atleast 3 person must play this Secret Santa game, returning to main menu");
-//            return;
-//        }
-//        for (int i = 0; i < noOfPeepsPlaying; i++) {
-//            if(i == 0) {
-//                System.out.println("Enter your name: ");
-//            }
-//            System.out.println("Enter name for person " + (i));
-//            Scanner personNameScanner = new Scanner(System.in);
-//            String personName = personNameScanner.nextLine();
-//            personsPlaying.add(new Person(personName));
-//        }
+        System.out.println("How many persons are playing this game? ");
+        Scanner peepsPlaying = new Scanner(System.in);
+        String noOfPeepsPlaying = peepsPlaying.nextLine();
+		int noOfPersons = Integer.parseInt(noOfPeepsPlaying);
+		if (noOfPersons < 3) {
+            System.out.println("Atleast 3 person must play this Secret Santa game, returning to main menu");
+            return;
+        }
+        for (int i = 0; i < noOfPersons; i++) {
+            if(i == 0) {
+                System.out.println("Enter your name: ");
+            } else {
+				System.out.println("Enter name for person " + (i));
+			}
+            Scanner personNameScanner = new Scanner(System.in);
+            String personName = personNameScanner.nextLine();
+            personsPlaying.add(new Person(personName));
+        }
 
-		Person Dennis = new Person("Dennis");
-		Person Oishi = new Person("Oishi");
-		Person Rahul = new Person("Rahul");
-		Person Sharon = new Person("Sharon");
-		Person Rita = new Person("Rita");
-		Person James = new Person("James");
-		Person Russel = new Person("Russel");
-		Person Nancy = new Person("Nancy");
-		Person John = new Person("John");
-
-		personsPlaying.add(Dennis);
-		personsPlaying.add(Oishi);
-		personsPlaying.add(Rahul);
-		personsPlaying.add(Sharon);
-		personsPlaying.add(Rita);
-		personsPlaying.add(James);
-		personsPlaying.add(Russel);
-		personsPlaying.add(Nancy);
-		personsPlaying.add(John);
-
-		Dennis.setExclusions("Oishi");
-		Dennis.setExclusions("Sharon");
-		Oishi.setExclusions("Dennis");
-		Oishi.setExclusions("Rita");
-		Sharon.setExclusions("Dennis");
-		Rita.setExclusions("Oishi");
+//		Person Dennis = new Person("Dennis");
+//		Person Oishi = new Person("Oishi");
+//		Person Rahul = new Person("Rahul");
+//		Person Sharon = new Person("Sharon");
+//		Person Rita = new Person("Rita");
+//		Person James = new Person("James");
+//		Person Russel = new Person("Russel");
+//		Person Nancy = new Person("Nancy");
+//		Person John = new Person("John");
+//
+//		personsPlaying.add(Dennis);
+//		personsPlaying.add(Oishi);
+//		personsPlaying.add(Rahul);
+//		personsPlaying.add(Sharon);
+//		personsPlaying.add(Rita);
+//		personsPlaying.add(James);
+//		personsPlaying.add(Russel);
+//		personsPlaying.add(Nancy);
+//		personsPlaying.add(John);
+//
+//		Dennis.setExclusions("Oishi");
+//		Dennis.setExclusions("Sharon");
+//		Oishi.setExclusions("Dennis");
+//		Oishi.setExclusions("Rita");
+//		Sharon.setExclusions("Dennis");
+//		Rita.setExclusions("Oishi");
 
 
 	}
