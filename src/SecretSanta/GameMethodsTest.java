@@ -20,9 +20,9 @@ public class GameMethodsTest {
 
 	@org.junit.Test
 	public void enterData() {
-		String input0 = "0";
-		ByteArrayInputStream in0 = new ByteArrayInputStream(input0.getBytes());
-		System.setIn(in0);
+		String choiceInput = "0";
+		ByteArrayInputStream choiceInputBuffer = new ByteArrayInputStream(choiceInput.getBytes());
+		System.setIn(choiceInputBuffer);
 		GameMethods.enterData(personsPlaying);
 		assertEquals(0, personsPlaying.size());
 	}
