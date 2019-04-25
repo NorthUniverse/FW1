@@ -1,7 +1,5 @@
 package SecretSanta;
 
-import org.junit.Test;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,37 +38,37 @@ public class GameMethodsTest {
 
 	@org.junit.Test
 	public void addPerson() {
-		String input = "Phil";
-		InputStream in = new ByteArrayInputStream(input.getBytes());
-		System.setIn(in);
+		String input = "Stark";
+		InputStream inputStream = new ByteArrayInputStream(input.getBytes());
+		System.setIn(inputStream);
 		GameMethods.addPerson(personsPlaying);
-		assertEquals("Phil", personsPlaying.get(0).getName());
+		assertEquals("Stark", personsPlaying.get(0).getName());
 	}
 
 	@org.junit.Test
 	public void removePerson() {
-		String addInput = "Phil";
-		InputStream addIn = new ByteArrayInputStream(addInput.getBytes());
-		System.setIn(addIn);
+		String addInput = "Lannister";
+		InputStream addInputStream = new ByteArrayInputStream(addInput.getBytes());
+		System.setIn(addInputStream);
 		GameMethods.addPerson(personsPlaying);
-		String removeInput = "Phil";
-		InputStream removeIn = new ByteArrayInputStream(removeInput.getBytes());
-		System.setIn(removeIn);
+		String removeInput = "Lannister";
+		InputStream removeInputStream = new ByteArrayInputStream(removeInput.getBytes());
+		System.setIn(removeInputStream);
 		GameMethods.removePerson(personsPlaying);
 		assertEquals(0, personsPlaying.size());
 	}
 
 	@org.junit.Test
 	public void printPersons() {
-		String addInput = "Phil";
-		InputStream addIn = new ByteArrayInputStream(addInput.getBytes());
-		System.setIn(addIn);
+		String input = "Ned";
+		InputStream inputStream = new ByteArrayInputStream(input.getBytes());
+		System.setIn(inputStream);
 		GameMethods.addPerson(personsPlaying);
-		OutputStream os = new ByteArrayOutputStream();
-		PrintStream ps = new PrintStream(os);
-		System.setOut(ps);
+		OutputStream outputStream = new ByteArrayOutputStream();
+		PrintStream printStream = new PrintStream(outputStream);
+		System.setOut(printStream);
 		GameMethods.printPersons(personsPlaying);
-		assertEquals("\nPerson List:\r\nPhil\r\n", os.toString());
+		assertEquals("\nPerson List:\r\nNed\r\n", outputStream.toString());
 		PrintStream originalOut = System.out;
 		System.setOut(originalOut);
 	}
@@ -119,11 +117,17 @@ public class GameMethodsTest {
 		assertNotEquals("John", personsPlaying.get(8).getSecrectSantaFor().get(0));
 	}
 
-//	@org.junit.Test
-//	public void shuffleAndAssignSecretSanta() {
-//	}
-//
-//	@org.junit.Test
-//	public void setExclusions() {
-//	}
+	@org.junit.Test
+	public void shuffleAndAssignSecretSanta() {
+		personsPlaying.add(new Person("Jon"));
+		personsPlaying.add(new Person("Snow"));
+		int secrectSanataSizeBeforeShuffle = personsPlaying.get(0).getSecrectSantaFor().size();
+		GameMethods.shuffleAndAssignSecretSanta(personsPlaying);
+		int secrectSanataSizeAfterShuffle = personsPlaying.get(0).getSecrectSantaFor().size();
+		assertNotEquals(secrectSanataSizeBeforeShuffle,secrectSanataSizeAfterShuffle);
+	}
+
+	@org.junit.Test
+	public void setExclusions() {
+	}
 }
