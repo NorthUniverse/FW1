@@ -100,8 +100,14 @@ public class GameMethods {
 
 	public static void playSecretSanta(List<Person> personsPlaying) {
 
-		System.out.println("\nStarting game: \n");
+		// Logic for this Method is:
+		// Shuffle and assign Secret Santa to all
+		/* {If a person is secret santa for himself/herself, then Shuffle and assign Secret Santa to all
+		   or If a person from exclusion is secret santa, then Shuffle and assign Secret Santa to all } */
+		/* Else, {if the game is run the 2nd time, check to see past secret Santa is the same person, if true, then Shuffle and assign Secret Santa to all
+		         if the game is run more than 2 times, check to see past secret Santa and the one before that is the same person, if true, then Shuffle and assign Secret Santa to all } */
 
+		System.out.println("\nStarting game: \n");
 		shuffleAndAssignSecretSanta(personsPlaying);
 
 		boolean shuffleFlag = false;
