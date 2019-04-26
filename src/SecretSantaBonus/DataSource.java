@@ -12,8 +12,15 @@ public class DataSource {
 			Statement statement = conn.createStatement();
 			statement.execute("CREATE TABLE IS NOT EXISTS person " +
 					               " (name TEXT, exclusuions TEXT, secretSantaFor TEXT)");
-			statement.execute("INSERT INTO person (name, exclusions, secretSantaFor) " +
-					               "VALUES('Jon','Sumo','Sam')");
+//			statement.execute("INSERT INTO person (name, exclusions, secretSantaFor) " +
+//					               "VALUES('Jon','Sumo','Sam')");
+			statement.execute("CREATE TABLE IS NOT EXISTS person " +
+					" (name TEXT, exclusuions TEXT, secretSantaFor TEXT)");
+			statement.execute("CREATE TABLE IS NOT EXISTS person " +
+					" (name TEXT, exclusuions TEXT, secretSantaFor TEXT)");
+
+			statement.close();
+			conn.close();
 		} catch (SQLException e) {
 			System.out.println("SQL Exception: " + e.getMessage());
 		}
