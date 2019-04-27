@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static SecretSantaBonus.DataSource.openConnection;
 
 public class DataSource {
 
@@ -88,14 +87,46 @@ public class DataSource {
         }
     }
 
-    private static void insertToDB(Statement statement, String name, String exclusions, String secretSantaFor) throws SQLException{
-        			statement.execute("INSERT INTO " + TABLE_PERSONS +
-                                   " (" +  COLUMN_NAME + "," +
-                                          COLUMN_EXCLUSIONS + "," +
-                                          COLUMN_SECRETSANTAFOR +
-                                   " ) " +
-					               "VALUES(" + name + ","+ exclusions + ","+ secretSantaFor + ")");
+    public static void saveToDB(String name) {
+        try {
+            Statement statement = connection.createStatement();
+            insertToDB(statement, name, null, null);
+            if (statement != null) {
+                statement.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("SQL Exception: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
+
+    private static void insertToDB(Statement statement, String name, String exclusions, String secretSantaFor) throws SQLException{
+        statement.execute("INSERT INTO " + TABLE_PERSONS +
+                " (" +  COLUMN_NAME + "," +
+                COLUMN_EXCLUSIONS + "," +
+                COLUMN_SECRETSANTAFOR +
+                " ) " +
+                "VALUES(" + name + ","+ exclusions + ","+ secretSantaFor + ")");
+    }
+
+    public static void removeFromDB(String name) {
+        try {
+            Statement statement = connection.createStatement();
+            deleteFromDB(statement, name);
+            if (statement != null) {
+                statement.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("SQL Exception: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private static void deleteFromDB(Statement statement, String name) throws SQLException{
+        statement.execute("DELETE FROM " + TABLE_PERSONS +
+                " WHERE" +  COLUMN_NAME + " = " + name + ")");
+    }
+
 
     public static List<Person> readFromDB() {
 	    try {
@@ -120,7 +151,7 @@ public class DataSource {
             System.out.println("SQL Exception: " + e.getMessage());
             e.printStackTrace();
         } finally {
-	        return null;
+	        return new ArrayList<>();
         }
     }
 

@@ -1,6 +1,5 @@
 package SecretSantaBonus;
 
-import java.sql.SQLException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,8 +25,8 @@ public class GameMethods {
 			Scanner personNameScanner = new Scanner(System.in);
 			String personName = personNameScanner.nextLine();
 			personsPlaying.add(new Person(personName));
+            DataSource.saveToDB(personName);
 		}
-		DataSource.saveToDB(personsPlaying);
 	}
 
 	public static void addPerson(List<Person> personsPlaying) {
@@ -43,6 +42,7 @@ public class GameMethods {
 			}
 		}
 		personsPlaying.add(new Person(addPerson));
+        DataSource.saveToDB(addPerson);
 	}
 
 	public static void removePerson(List<Person> personsPlaying) {
@@ -53,6 +53,7 @@ public class GameMethods {
 		for (Person eachPerson : personsPlaying) {
 			if (eachPerson.getName().equalsIgnoreCase(removePerson)) {
 				personsPlaying.remove(eachPerson);
+                DataSource.removeFromDB(removePerson);
 				personFlag = true;
 				return;
 			}

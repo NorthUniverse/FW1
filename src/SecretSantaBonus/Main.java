@@ -1,6 +1,5 @@
 package SecretSantaBonus;
 
-import SecretSanta.MainMenu;
 
 public class Main {
 

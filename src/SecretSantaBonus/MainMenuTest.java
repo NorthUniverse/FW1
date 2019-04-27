@@ -1,7 +1,5 @@
 package SecretSantaBonus;
 
-import SecretSanta.MainMenu;
-
 import java.io.ByteArrayInputStream;
 
 public class MainMenuTest {

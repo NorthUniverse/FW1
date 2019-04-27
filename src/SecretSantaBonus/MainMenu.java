@@ -1,9 +1,5 @@
 package SecretSantaBonus;
 
-import SecretSanta.GameMethods;
-import SecretSanta.Person;
-
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -24,22 +20,22 @@ public class MainMenu implements Runnable {
 				int menuOption = menuOptionScanner.nextInt();
 				switch (menuOption) {
 					case 1:
-						SecretSantaBonus.GameMethods.enterData(personsPlaying);
+						GameMethods.enterData(personsPlaying);
 						break;
 					case 2:
-						SecretSantaBonus.GameMethods.addPerson(personsPlaying);
+						GameMethods.addPerson(personsPlaying);
 						break;
 					case 3:
-						SecretSantaBonus.GameMethods.removePerson(personsPlaying);
+						GameMethods.removePerson(personsPlaying);
 						break;
 					case 4:
-						SecretSantaBonus.GameMethods.printPersons(personsPlaying);
+						GameMethods.printPersons(personsPlaying);
 						break;
 					case 5:
-						SecretSantaBonus.GameMethods.setExclusions(personsPlaying);
+						GameMethods.setExclusions(personsPlaying);
 						break;
 					case 6:
-						SecretSantaBonus.GameMethods.playSecretSanta(personsPlaying);
+						GameMethods.playSecretSanta(personsPlaying);
 						break;
 					case 7:
 						System.out.println("Ending game");

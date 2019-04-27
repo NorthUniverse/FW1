@@ -1,8 +1,5 @@
 package SecretSantaBonus;
 
-import SecretSanta.GameMethods;
-import SecretSanta.Person;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
