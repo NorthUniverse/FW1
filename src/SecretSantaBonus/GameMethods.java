@@ -202,6 +202,7 @@ public class GameMethods {
 					break;
 				}
 				eachPerson.setExclusions(copyOfPersonsPlaying.get(exclusionOption - 1).getName());
+				DataSource.saveExclusionsToDB(eachPerson.getName(), copyOfPersonsPlaying.get(exclusionOption - 1).getName());
 				System.out.println(copyOfPersonsPlaying.get(exclusionOption - 1).getName() + " has been added as exclusion for " + eachPerson.getName());
 				copyOfPersonsPlaying.remove(exclusionOption - 1);
 			}

@@ -69,6 +69,43 @@ public class DataSource {
         }
     }
 
+    private static void insertToDB(Statement statement, String name, String exclusions, String secretSantaFor) throws SQLException{
+        statement.execute("INSERT INTO " + TABLE_PERSONS +
+                " (" +  COLUMN_NAME + "," +
+                COLUMN_EXCLUSIONS + "," +
+                COLUMN_SECRETSANTAFOR +
+                " ) " +
+                "VALUES(" + name + ","+ exclusions + ","+ secretSantaFor + ")");
+    }
+
+    private static void deleteFromDB(Statement statement, String name) throws SQLException{
+        statement.execute("DELETE FROM " + TABLE_PERSONS +
+                " WHERE" +  COLUMN_NAME + " = " + name + ")");
+    }
+
+    public static String queryNameColumn(String name, String columnName) {
+        String queryResult = "";
+	    try {
+            Statement statement = connection.createStatement();
+            ResultSet results = statement.executeQuery("SELECT " + columnName +
+                                                           " FROM " + TABLE_PERSONS +
+                                                           " WHERE " + COLUMN_NAME + " = " + name);
+            while(results.next()) {
+                queryResult = results.getString(columnName);
+            }
+            results.close();
+            if (statement != null) {
+                statement.close();
+            }
+            return queryResult;
+        } catch (SQLException e) {
+            System.out.println("SQL Exception: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            return queryResult;
+        }
+    }
+
     public static void saveToDB(List<Person> personList) {
 	    try {
             Statement statement = connection.createStatement();
@@ -100,15 +137,6 @@ public class DataSource {
         }
     }
 
-    private static void insertToDB(Statement statement, String name, String exclusions, String secretSantaFor) throws SQLException{
-        statement.execute("INSERT INTO " + TABLE_PERSONS +
-                " (" +  COLUMN_NAME + "," +
-                COLUMN_EXCLUSIONS + "," +
-                COLUMN_SECRETSANTAFOR +
-                " ) " +
-                "VALUES(" + name + ","+ exclusions + ","+ secretSantaFor + ")");
-    }
-
     public static void removeFromDB(String name) {
         try {
             Statement statement = connection.createStatement();
@@ -122,25 +150,26 @@ public class DataSource {
         }
     }
 
-    private static void deleteFromDB(Statement statement, String name) throws SQLException{
-        statement.execute("DELETE FROM " + TABLE_PERSONS +
-                " WHERE" +  COLUMN_NAME + " = " + name + ")");
-    }
-
-
     public static List<Person> readFromDB() {
 	    try {
             Statement statement = connection.createStatement();
             List<Person> personList = new ArrayList<>();
 
             ResultSet results = statement.executeQuery("SELECT * FROM " + TABLE_PERSONS);
+            int i = 0;
 
             while(results.next()) {
-                System.out.println(results.getString(COLUMN_NAME) + " " +
-                        results.getString(COLUMN_EXCLUSIONS) + " " +
-                        results.getString(COLUMN_SECRETSANTAFOR));
                 personList.add(new Person(results.getString(COLUMN_NAME)));
 
+                List<String> exclusionList = stringToList(results.getString(COLUMN_EXCLUSIONS));
+                for (String eachExclision : exclusionList) {
+                    personList.get(i).setExclusions(eachExclision);
+                }
+                List<String> santaList = stringToList(results.getString(COLUMN_SECRETSANTAFOR));
+                for (String eachSanta : santaList) {
+                    personList.get(i).setSecrectSantaFor(eachSanta);
+                }
+                i++;
             }
             results.close();
             if (statement != null) {
@@ -153,6 +182,12 @@ public class DataSource {
         } finally {
 	        return new ArrayList<>();
         }
+    }
+
+    public static void saveExclusionsToDB(String personName, String exclusionName) {
+	    String currentExclusions = queryNameColumn(personName, COLUMN_EXCLUSIONS);
+	    currentExclusions = currentExclusions + exclusionName;
+	    updateNameColumn(personName, COLUMN_EXCLUSIONS, currentExclusions);
     }
 
 
