@@ -14,8 +14,8 @@ public class MainMenu implements Runnable {
 	public void run() {
 		System.out.println("Welcome to Secret Santa Game: ");
 		boolean quit = false;
-		List<Person> personsPlaying = new ArrayList<>();
 		DataSource.initialize();
+		List<SecretSantaBonus.Person> personsPlaying = DataSource.readFromDB();
 
 		while (!quit) {
 			try {
@@ -24,22 +24,22 @@ public class MainMenu implements Runnable {
 				int menuOption = menuOptionScanner.nextInt();
 				switch (menuOption) {
 					case 1:
-						GameMethods.enterData(personsPlaying);
+						SecretSantaBonus.GameMethods.enterData(personsPlaying);
 						break;
 					case 2:
-						GameMethods.addPerson(personsPlaying);
+						SecretSantaBonus.GameMethods.addPerson(personsPlaying);
 						break;
 					case 3:
-						GameMethods.removePerson(personsPlaying);
+						SecretSantaBonus.GameMethods.removePerson(personsPlaying);
 						break;
 					case 4:
-						GameMethods.printPersons(personsPlaying);
+						SecretSantaBonus.GameMethods.printPersons(personsPlaying);
 						break;
 					case 5:
-						GameMethods.setExclusions(personsPlaying);
+						SecretSantaBonus.GameMethods.setExclusions(personsPlaying);
 						break;
 					case 6:
-						GameMethods.playSecretSanta(personsPlaying);
+						SecretSantaBonus.GameMethods.playSecretSanta(personsPlaying);
 						break;
 					case 7:
 						System.out.println("Ending game");
