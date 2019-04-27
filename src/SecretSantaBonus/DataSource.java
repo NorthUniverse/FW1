@@ -26,14 +26,31 @@ public class DataSource {
 			statement.execute("CREATE TABLE IF NOT EXISTS " + TABLE_PERSONS +
 					               " (" + COLUMN_NAME + " text, " +
                                           COLUMN_EXCLUSIONS + " text, "  +
-                                          COLUMN_SECRETSANTAFOR + " text" + 
-                                   ")");
-//			statement.execute("INSERT INTO persons (name, exclusions, secretSantaFor) " +
+                                          COLUMN_SECRETSANTAFOR + " text" +
+                                   " )");
+
+//			statement.execute("INSERT INTO" + TABLE_PERSONS +
+//                                   " (" +  COLUMN_NAME + "," +
+//                                          COLUMN_EXCLUSIONS + "," +
+//                                          COLUMN_SECRETSANTAFOR +
+//                                   " ) " +
 //					               "VALUES('Dennis','Oishi','Omi')");
-//			statement.execute("INSERT INTO persons (name, exclusions, secretSantaFor) " +
-//					"VALUES('Oishi','Dennis','Rahul')");
-//			statement.execute("INSERT INTO persons (name, exclusions, secretSantaFor) " +
-//					"VALUES('Rahul','','Dennis')");
+//
+//            statement.execute("INSERT INTO" + TABLE_PERSONS +
+//                                   " (" +  COLUMN_NAME + "," +
+//                                          COLUMN_EXCLUSIONS + "," +
+//                                          COLUMN_SECRETSANTAFOR +
+//                                   " ) " +
+//                                   "VALUES('Dennis','Oishi','Omi')");
+//
+//
+//            statement.execute("INSERT INTO" + TABLE_PERSONS +
+//                                   " (" +  COLUMN_NAME + "," +
+//                                           COLUMN_EXCLUSIONS + "," +
+//                                           COLUMN_SECRETSANTAFOR +
+//                                   ") " +
+//                                  "VALUES('Rahul','','Dennis')");
+
 //			statement.execute("UPDATE persons SET secretSantaFor = 'stringList' WHERE name = 'query name'");
 //			statement.execute("DELETE FROM persons WHERE name = 'query name'");
 
