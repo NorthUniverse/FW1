@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb600fb9-12db-4be1-aaf7-0507c8e1a3e2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/secrectSanta.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,10 +34,55 @@
       <file leaf-file-name="DataSource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="72" lean-forward="true" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+            <state relative-caret-position="978">
+              <caret line="113" column="26" lean-forward="true" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="791">
+              <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameMethods.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-833">
+              <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6116#6124#0" expanded="true" />
+                <element signature="e#6608#6616#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#408#409#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#489#490#0" expanded="true" />
+                <element signature="e#536#537#0" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#725#726#0" expanded="true" />
+                <element signature="e#759#760#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,8 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/House/Room.java" />
-        <option value="$PROJECT_DIR$/src/Jukebox/Jukebox.java" />
         <option value="$PROJECT_DIR$/src/House/Bedr.java" />
         <option value="$PROJECT_DIR$/src/House/Bedroom.java" />
         <option value="$PROJECT_DIR$/src/House/Wall.java" />
@@ -116,15 +159,16 @@
         <option value="$PROJECT_DIR$/src/SecretSanta/DataSource.java" />
         <option value="$PROJECT_DIR$/src/SecretSanta/GameMethodsTest.java" />
         <option value="$PROJECT_DIR$/src/SecretSanta/Main.java" />
+        <option value="$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java" />
+        <option value="$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -132,6 +176,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -161,8 +207,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -170,7 +214,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/SecretSantaBonus/sqlite-jdbc-3.27.2.1.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -656,7 +700,21 @@
       <option name="project" value="LOCAL" />
       <updated>1556240727591</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Commit 4/27/2019">
+      <created>1556385561455</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1556385561455</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Commit 4/27/2019">
+      <created>1556386120713</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1556386120713</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -692,7 +750,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -703,54 +761,26 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.32943678" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info active="true" anchor="right" id="Run" order="8" sideWeight="0.49840596" visible="true" weight="0.340625" />
+      <window_info anchor="right" id="Run" order="8" sideWeight="0.49840596" weight="0.34010416" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1421875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18854167" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.36663124" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Debug" order="9" weight="0.38958332" />
+      <window_info anchor="right" id="Debug" order="10" weight="0.38958332" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.50159407" side_tool="true" weight="0.33125" />
-      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.36663124" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Run" order="8" visible="true" weight="0.33125" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1421875" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="4" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.36663124" />
-      <window_info anchor="right" id="Debug" order="9" weight="0.42395833" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.32943678" />
-      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943678" />
-      <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32943678" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-    </layout-to-restore>
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+    </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -766,21 +796,15 @@
     <MESSAGE value="Commit 4/19/2019" />
     <MESSAGE value="Commit 4/24/2019" />
     <MESSAGE value="Commit 4/25/2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 4/25/2019" />
+    <MESSAGE value="Commit 4/27/2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 4/27/2019" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Jukebox_InnerClass/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1557">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Jukebox_InnerClass/Playlist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1116">
@@ -978,32 +1002,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="1152" column="15" selection-start-line="1152" selection-start-column="15" selection-end-line="1152" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="432" selection-start-line="432" selection-end-line="432" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/String.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/SecretSanta/DataSource.java" />
     <entry file="file://$PROJECT_DIR$/src/SecretSanta/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1028,13 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1164">
-          <caret line="94" column="83" lean-forward="true" selection-start-line="94" selection-start-column="83" selection-end-line="94" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSanta/MainMenuTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1049,17 +1047,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSanta/GameMethodsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="64" selection-start-line="57" selection-start-column="64" selection-end-line="57" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSanta/GameMethods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSanta/GameMethodsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-833">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6116#6124#0" expanded="true" />
+            <element signature="e#6608#6616#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,10 +1100,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="791">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="72" lean-forward="true" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+        <state relative-caret-position="978">
+          <caret line="113" column="26" lean-forward="true" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1120,7 +1157,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1137,6 +1174,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -15,6 +15,7 @@ public class MainMenu implements Runnable {
 		System.out.println("Welcome to Secret Santa Game: ");
 		boolean quit = false;
 		List<Person> personsPlaying = new ArrayList<>();
+		DataSource.initialize();
 
 		while (!quit) {
 			try {
@@ -53,6 +54,7 @@ public class MainMenu implements Runnable {
 				System.out.println("Wrong datatype for input");
 			}
 		}
+		DataSource.closeConnection();
 	}
 
 	private static void printMainMenu() {

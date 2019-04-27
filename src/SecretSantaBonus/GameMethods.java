@@ -1,7 +1,6 @@
 package SecretSantaBonus;
 
-import SecretSanta.Person;
-
+import java.sql.SQLException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.Scanner;
 
 public class GameMethods {
 
-	public static void enterData(List<Person> personsPlaying) {
+	public static void enterData(List<SecretSantaBonus.Person> personsPlaying) throws SQLException {
 		System.out.println("How many persons are playing this game? ");
 		Scanner peepsPlaying = new Scanner(System.in);
 		String noOfPeepsPlaying = peepsPlaying.nextLine();
@@ -28,6 +27,7 @@ public class GameMethods {
 			String personName = personNameScanner.nextLine();
 			personsPlaying.add(new Person(personName));
 		}
+		DataSource.saveToDB(personsPlaying);
 	}
 
 	public static void addPerson(List<Person> personsPlaying) {
