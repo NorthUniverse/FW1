@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class GameMethods {
 
-	public static void enterData(List<SecretSantaBonus.Person> personsPlaying) throws SQLException {
+	public static void enterData(List<SecretSantaBonus.Person> personsPlaying) {
 		System.out.println("How many persons are playing this game? ");
 		Scanner peepsPlaying = new Scanner(System.in);
 		String noOfPeepsPlaying = peepsPlaying.nextLine();

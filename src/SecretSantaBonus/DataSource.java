@@ -70,15 +70,15 @@ public class DataSource {
         }
     }
 
-    public static void saveToDB(List<Person> personList) throws SQLException {
-        Statement statement = connection.createStatement();
-	    for (Person eachPerson : personList) {
-	        String name = eachPerson.getName();
-	        String exclusions = listToString(eachPerson.getExclusions());
-	        String secretSantaFor = listToString(eachPerson.getSecrectSantaFor());
-	        insertToDB(statement, name, exclusions, secretSantaFor);
-        }
-        try {
+    public static void saveToDB(List<Person> personList) {
+	    try {
+            Statement statement = connection.createStatement();
+            for (Person eachPerson : personList) {
+                String name = eachPerson.getName();
+                String exclusions = listToString(eachPerson.getExclusions());
+                String secretSantaFor = listToString(eachPerson.getSecrectSantaFor());
+                insertToDB(statement, name, exclusions, secretSantaFor);
+            }
             if (statement != null) {
                 statement.close();
             }
@@ -97,24 +97,31 @@ public class DataSource {
 					               "VALUES(" + name + ","+ exclusions + ","+ secretSantaFor + ")");
     }
 
-    public static List<Person> readFromDB() throws SQLException {
-        Statement statement = connection.createStatement();
-	    List<Person> personList = new ArrayList<>();
+    public static List<Person> readFromDB() {
+	    try {
+            Statement statement = connection.createStatement();
+            List<Person> personList = new ArrayList<>();
 
-        ResultSet results = statement.executeQuery("SELECT * FROM " + TABLE_PERSONS);
+            ResultSet results = statement.executeQuery("SELECT * FROM " + TABLE_PERSONS);
 
-        while(results.next()) {
-            System.out.println(results.getString(COLUMN_NAME) + " " +
-                    results.getString(COLUMN_EXCLUSIONS) + " " +
-                    results.getString(COLUMN_SECRETSANTAFOR));
-            personList.add(new Person(results.getString(COLUMN_NAME)));
+            while(results.next()) {
+                System.out.println(results.getString(COLUMN_NAME) + " " +
+                        results.getString(COLUMN_EXCLUSIONS) + " " +
+                        results.getString(COLUMN_SECRETSANTAFOR));
+                personList.add(new Person(results.getString(COLUMN_NAME)));
 
+            }
+            results.close();
+            if (statement != null) {
+                statement.close();
+            }
+            return personList;
+        } catch (SQLException e) {
+            System.out.println("SQL Exception: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+	        return null;
         }
-        results.close();
-        statement.close();
-//        conn.close();
-
-	    return personList;
     }
 
 
@@ -143,7 +150,6 @@ public class DataSource {
 			System.out.println("SQL Exception: " + e.getMessage());
 			e.printStackTrace();
 		}
-
 
 	}
 
