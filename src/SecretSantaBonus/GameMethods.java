@@ -82,7 +82,7 @@ public class GameMethods {
 		   or If a person from exclusion is secret santa, then Shuffle and assign Secret Santa to all } */
 		/* Else, {if the game is run the 2nd time, check to see past secret Santa is the same person, if true, then Shuffle and assign Secret Santa to all
 		         if the game is run more than 2 times, check to see past secret Santa and the one before that is the same person, if true, then Shuffle and assign Secret Santa to all } */
-
+        // Save ganme results to DB.
 		System.out.println("\nStarting game: \n");
 		shuffleAndAssignSecretSanta(personsPlaying);
 
@@ -155,6 +155,9 @@ public class GameMethods {
 				break;
 			}
 		}
+        for (Person eachPerson : personsPlaying) {
+            
+        }
 
 		System.out.println("You have to buy gift for " + personsPlaying.get(0).getSecrectSantaFor().get(personsPlaying.get(0).getSecrectSantaFor().size() - 1) + "\n");
 		System.out.println("See all Secret Santa game results(Y/N)? ");
@@ -202,7 +205,7 @@ public class GameMethods {
 					break;
 				}
 				eachPerson.setExclusions(copyOfPersonsPlaying.get(exclusionOption - 1).getName());
-				DataSource.saveExclusionsToDB(eachPerson.getName(), copyOfPersonsPlaying.get(exclusionOption - 1).getName());
+				DataSource.addExclusionsToDB(eachPerson.getName(), copyOfPersonsPlaying.get(exclusionOption - 1).getName());
 				System.out.println(copyOfPersonsPlaying.get(exclusionOption - 1).getName() + " has been added as exclusion for " + eachPerson.getName());
 				copyOfPersonsPlaying.remove(exclusionOption - 1);
 			}
