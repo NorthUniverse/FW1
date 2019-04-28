@@ -106,6 +106,25 @@ public class DataSource {
         }
     }
 
+    public static void updateNameColumn(String name, String columnName, String newColumnValue) {
+        String queryResult = "";
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet results = statement.executeQuery("UPDATE " + TABLE_PERSONS +
+                                                            " SET " + columnName +
+                                                            " = " + newColumnValue +
+                                                            " WHERE " + COLUMN_NAME +
+                                                            " = " + name);
+            results.close();
+            if (statement != null) {
+                statement.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("SQL Exception: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
     public static void saveToDB(List<Person> personList) {
 	    try {
             Statement statement = connection.createStatement();
@@ -186,7 +205,7 @@ public class DataSource {
 
     public static void saveExclusionsToDB(String personName, String exclusionName) {
 	    String currentExclusions = queryNameColumn(personName, COLUMN_EXCLUSIONS);
-	    currentExclusions = currentExclusions + exclusionName;
+	    currentExclusions = currentExclusions + "," + exclusionName;
 	    updateNameColumn(personName, COLUMN_EXCLUSIONS, currentExclusions);
     }
 
