@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb600fb9-12db-4be1-aaf7-0507c8e1a3e2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,24 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameMethods.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java">
+      <file leaf-file-name="GameMethodsTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/GameMethodsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="159" column="50" lean-forward="true" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6245#6253#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+            <state relative-caret-position="1003">
+              <caret line="59" column="35" lean-forward="true" selection-start-line="56" selection-start-column="46" selection-end-line="59" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,23 +33,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="26" column="38" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSourceTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataSourceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="507">
+              <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataSource.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="79" column="106" selection-start-line="79" selection-start-column="106" selection-end-line="79" selection-end-column="106" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,6 +72,8 @@
     <findStrings>
       <find>R</find>
       <find>secrectSantaFor</find>
+      <find>true</find>
+      <find>assertTrue</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,17 +120,17 @@
         <option value="$PROJECT_DIR$/src/SecretSanta/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/SecretSanta/Person.java" />
         <option value="$PROJECT_DIR$/src/SecretSanta/PersonTest.java" />
-        <option value="$PROJECT_DIR$/src/SecretSanta/MainMenuTest.java" />
         <option value="$PROJECT_DIR$/src/SecretSanta/GameMethods.java" />
         <option value="$PROJECT_DIR$/src/SecretSanta/DataSource.java" />
         <option value="$PROJECT_DIR$/src/SecretSanta/GameMethodsTest.java" />
-        <option value="$PROJECT_DIR$/src/SecretSanta/Main.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/Main.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/MainMenuTest.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/GameMethodsTest.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/PersonTest.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java" />
+        <option value="$PROJECT_DIR$/src/SecretSanta/Main.java" />
+        <option value="$PROJECT_DIR$/src/SecretSanta/MainMenuTest.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" />
       </list>
@@ -170,12 +161,6 @@
               <item name="FW1" type="b2602c69:ProjectViewProjectNode" />
               <item name="FW1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FW1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FW1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SecretSanta" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FW1" type="b2602c69:ProjectViewProjectNode" />
@@ -230,59 +215,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DataSource">
-    <configuration name="DataSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SecretSantaBonus.DataSource" />
+  <component name="RunManager" selected="JUnit.DataSourceTest.queryNameColumn">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="BinaryTree_Abstraction.Main" />
       <module name="FW1" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="DataSourceTest.closeConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FW1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="SecretSantaBonus.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="BinaryTree_Abstraction.Main" />
-      <module name="FW1" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="GameMethodsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FW1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SecretSanta.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="SecretSanta" />
-      <option name="MAIN_CLASS_NAME" value="SecretSanta.GameMethodsTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="MainMenuTest.run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FW1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SecretSanta.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="SecretSanta" />
-      <option name="MAIN_CLASS_NAME" value="SecretSanta.MainMenuTest" />
-      <option name="METHOD_NAME" value="run" />
+      <option name="PACKAGE_NAME" value="SecretSantaBonus" />
+      <option name="MAIN_CLASS_NAME" value="SecretSantaBonus.DataSourceTest" />
+      <option name="METHOD_NAME" value="closeConnection" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -293,20 +244,66 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="PersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DataSourceTest.initialize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SecretSanta.*" />
+          <option name="PATTERN" value="SecretSantaBonus.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="SecretSanta" />
-      <option name="MAIN_CLASS_NAME" value="SecretSanta.PersonTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="SecretSantaBonus" />
+      <option name="MAIN_CLASS_NAME" value="SecretSantaBonus.DataSourceTest" />
+      <option name="METHOD_NAME" value="initialize" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="DataSourceTest.openConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FW1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SecretSantaBonus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="SecretSantaBonus" />
+      <option name="MAIN_CLASS_NAME" value="SecretSantaBonus.DataSourceTest" />
+      <option name="METHOD_NAME" value="openConnection" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="DataSourceTest.queryNameColumn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FW1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SecretSantaBonus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="SecretSantaBonus" />
+      <option name="MAIN_CLASS_NAME" value="SecretSantaBonus.DataSourceTest" />
+      <option name="METHOD_NAME" value="queryNameColumn" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -355,17 +352,17 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.GameMethodsTest" />
-      <item itemvalue="JUnit.MainMenuTest.run" />
-      <item itemvalue="JUnit.PersonTest" />
-      <item itemvalue="Application.DataSource" />
+      <item itemvalue="JUnit.DataSourceTest.openConnection" />
+      <item itemvalue="JUnit.DataSourceTest.closeConnection" />
+      <item itemvalue="JUnit.DataSourceTest.initialize" />
+      <item itemvalue="JUnit.DataSourceTest.queryNameColumn" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DataSource" />
-        <item itemvalue="JUnit.PersonTest" />
-        <item itemvalue="JUnit.GameMethodsTest" />
-        <item itemvalue="JUnit.MainMenuTest.run" />
+        <item itemvalue="JUnit.DataSourceTest.queryNameColumn" />
+        <item itemvalue="JUnit.DataSourceTest.initialize" />
+        <item itemvalue="JUnit.DataSourceTest.closeConnection" />
+        <item itemvalue="JUnit.DataSourceTest.openConnection" />
       </list>
     </recent_temporary>
   </component>
@@ -379,13 +376,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543358758572</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Commit 2/9/19">
-      <created>1549753917189</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1549753917189</updated>
     </task>
     <task id="LOCAL-00006" summary="Commit 2/9/19">
       <created>1550007122354</created>
@@ -723,39 +713,46 @@
       <option name="project" value="LOCAL" />
       <updated>1556471133902</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Commit 4/28/2019">
+      <created>1556473329766</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1556473329766</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameMethodsTest - 2019.04.25 at 16h 23m 10s.xml">
-      <configuration name="GameMethodsTest" configurationId="JUnit" />
+    <history-entry file="DataSourceTest_closeConnection - 2019.04.28 at 18h 44m 30s.xml">
+      <configuration name="DataSourceTest.closeConnection" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PersonTest - 2019.04.25 at 16h 49m 29s.xml">
-      <configuration name="PersonTest" configurationId="JUnit" />
+    <history-entry file="DataSourceTest_initialize - 2019.04.28 at 18h 45m 00s.xml">
+      <configuration name="DataSourceTest.initialize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameMethodsTest - 2019.04.25 at 16h 49m 38s.xml">
-      <configuration name="GameMethodsTest" configurationId="JUnit" />
+    <history-entry file="DataSourceTest_initialize - 2019.04.28 at 18h 45m 15s.xml">
+      <configuration name="DataSourceTest.initialize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameMethodsTest - 2019.04.25 at 16h 50m 28s.xml">
-      <configuration name="GameMethodsTest" configurationId="JUnit" />
+    <history-entry file="DataSourceTest_queryNameColumn - 2019.04.28 at 18h 48m 38s.xml">
+      <configuration name="DataSourceTest.queryNameColumn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameMethodsTest - 2019.04.25 at 16h 51m 14s.xml">
-      <configuration name="GameMethodsTest" configurationId="JUnit" />
+    <history-entry file="DataSourceTest_queryNameColumn - 2019.04.28 at 18h 49m 04s.xml">
+      <configuration name="DataSourceTest.queryNameColumn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainMenuTest_run - 2019.04.25 at 16h 56m 53s.xml">
-      <configuration name="MainMenuTest.run" configurationId="JUnit" />
+    <history-entry file="DataSourceTest_queryNameColumn - 2019.04.28 at 18h 55m 51s.xml">
+      <configuration name="DataSourceTest.queryNameColumn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainMenuTest_run - 2019.04.25 at 16h 57m 32s.xml">
-      <configuration name="MainMenuTest.run" configurationId="JUnit" />
+    <history-entry file="DataSourceTest_queryNameColumn - 2019.04.28 at 18h 57m 09s.xml">
+      <configuration name="DataSourceTest.queryNameColumn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainMenuTest_run - 2019.04.25 at 16h 57m 38s.xml">
-      <configuration name="MainMenuTest.run" configurationId="JUnit" />
+    <history-entry file="DataSourceTest_queryNameColumn - 2019.04.28 at 18h 57m 54s.xml">
+      <configuration name="DataSourceTest.queryNameColumn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameMethodsTest - 2019.04.25 at 16h 57m 44s.xml">
-      <configuration name="GameMethodsTest" configurationId="JUnit" />
+    <history-entry file="DataSourceTest_queryNameColumn - 2019.04.28 at 18h 59m 36s.xml">
+      <configuration name="DataSourceTest.queryNameColumn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PersonTest - 2019.04.25 at 16h 58m 04s.xml">
-      <configuration name="PersonTest" configurationId="JUnit" />
+    <history-entry file="DataSourceTest_queryNameColumn - 2019.04.28 at 19h 13m 06s.xml">
+      <configuration name="DataSourceTest.queryNameColumn" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -764,27 +761,27 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32943678" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.32943678" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943678" />
-      <window_info anchor="right" id="Run" order="8" sideWeight="0.49840596" weight="0.34010416" />
+      <window_info active="true" anchor="right" id="Run" order="8" sideWeight="0.49840596" visible="true" weight="0.41354167" />
       <window_info anchor="bottom" id="Terminal" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18854167" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.111979164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="right" id="Debug" order="10" weight="0.38958332" />
+      <window_info anchor="right" id="Debug" order="10" weight="0.46354166" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.50159407" side_tool="true" weight="0.33125" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32943678" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
@@ -811,24 +808,50 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java</url>
+          <line>150</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java</url>
+          <line>71</line>
+          <properties class="SecretSantaBonus.DataSource" method="insertToDB">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="56" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Jukebox_LinkedList/Playlist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1116">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jukebox_LinkedList/Practice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Jukebox_LinkedList/Song.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -970,48 +993,13 @@
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ThreadLocalRandom.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Random.java" />
     <entry file="file://$PROJECT_DIR$/src/SecretSantaOldCode/GameMethods.java" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/String.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/SecretSanta/DataSource.java" />
-    <entry file="file://$PROJECT_DIR$/src/SecretSanta/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSanta/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSanta/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="40" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSanta/MainMenuTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSanta/PersonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="47" lean-forward="true" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1022,20 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSanta/GameMethodsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/GameMethodsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1043,24 +1017,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/PersonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSanta/PersonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="42" column="47" lean-forward="true" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenuTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="383">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1075,36 +1072,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/SecretSanta/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+        <state relative-caret-position="85">
+          <caret line="5" column="60" lean-forward="true" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/jdk/internal/reflect/DelegatingMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSanta/MainMenuTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSanta/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSanta/GameMethodsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="60" column="49" lean-forward="true" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="198" column="23" selection-start-line="198" selection-start-column="23" selection-end-line="198" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/junit-4.12-sources.jar!/org/junit/Assert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="507">
+          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/GameMethodsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="35" lean-forward="true" selection-start-line="56" selection-start-column="46" selection-end-line="59" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="79" column="106" selection-start-line="79" selection-start-column="106" selection-end-line="79" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

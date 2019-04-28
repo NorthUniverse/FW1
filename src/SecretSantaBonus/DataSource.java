@@ -24,7 +24,7 @@ public class DataSource {
 
 	private static Connection connection;
 
-	private static void openConnection() {
+	public static void openConnection() {
         try {
             connection = DriverManager.getConnection(CONNECTION_STRING);
         } catch (SQLException e) {
@@ -71,11 +71,12 @@ public class DataSource {
 
     private static void insertToDB(Statement statement, String name, String exclusions, String secretSantaFor) throws SQLException{
         statement.execute("INSERT INTO " + TABLE_PERSONS +
-                " (" +  COLUMN_NAME + "," +
-                COLUMN_EXCLUSIONS + "," +
+                " (" +  COLUMN_NAME + ", " +
+                COLUMN_EXCLUSIONS + ", " +
                 COLUMN_SECRETSANTAFOR +
-                " ) " +
-                "VALUES(" + name + ","+ exclusions + ","+ secretSantaFor + ")");
+                ") " +
+                "VALUES (" + name + ", " + exclusions + ", " + secretSantaFor + ")");
+
     }
 
     private static void deleteFromDB(Statement statement, String name) throws SQLException{
