@@ -4,6 +4,7 @@
     <list default="true" id="bb600fb9-12db-4be1-aaf7-0507c8e1a3e2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,19 +24,20 @@
       <file leaf-file-name="GameMethods.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3417">
-              <caret line="204" column="68" selection-start-line="204" selection-start-column="68" selection-end-line="204" selection-end-column="68" />
+            <state relative-caret-position="306">
+              <caret line="159" column="50" lean-forward="true" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6245#6253#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="366">
               <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -44,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSource.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataSource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="116" column="69" selection-start-line="116" selection-start-column="69" selection-end-line="116" selection-end-column="69" />
+            <state relative-caret-position="1964">
+              <caret line="214" column="58" selection-start-line="214" selection-start-column="58" selection-end-line="214" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,8 +130,8 @@
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/GameMethodsTest.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/PersonTest.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java" />
-        <option value="$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java" />
         <option value="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" />
+        <option value="$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java" />
       </list>
     </option>
   </component>
@@ -144,6 +146,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -173,8 +177,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,20 +368,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543358758572</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Commit 2/9/19">
-      <created>1549744217165</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1549744217165</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Commit 2/9/19">
-      <created>1549750481928</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1549750481928</updated>
     </task>
     <task id="LOCAL-00004" summary="Commit 2/9/19">
       <created>1549753147463</created>
@@ -710,7 +698,21 @@
       <option name="project" value="LOCAL" />
       <updated>1556409394482</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Commit 4/27/2019">
+      <created>1556419101520</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1556419101521</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Commit 4/27/2019">
+      <created>1556469100489</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1556469100489</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -771,11 +773,11 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.50159407" side_tool="true" weight="0.33125" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32943678" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.36663124" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32943678" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1071,10 +1073,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+        <state relative-caret-position="1964">
+          <caret line="214" column="58" selection-start-line="214" selection-start-column="58" selection-end-line="214" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1083,18 +1085,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3417">
-          <caret line="204" column="68" selection-start-line="204" selection-start-column="68" selection-end-line="204" selection-end-column="68" />
+        <state relative-caret-position="306">
+          <caret line="159" column="50" lean-forward="true" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6245#6253#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="116" column="69" selection-start-line="116" selection-start-column="69" selection-end-line="116" selection-end-column="69" />
+        <state relative-caret-position="366">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

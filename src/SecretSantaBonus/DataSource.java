@@ -181,8 +181,8 @@ public class DataSource {
                 personList.add(new Person(results.getString(COLUMN_NAME)));
 
                 List<String> exclusionList = stringToList(results.getString(COLUMN_EXCLUSIONS));
-                for (String eachExclision : exclusionList) {
-                    personList.get(i).setExclusions(eachExclision);
+                for (String eachExclusion : exclusionList) {
+                    personList.get(i).setExclusions(eachExclusion);
                 }
                 List<String> santaList = stringToList(results.getString(COLUMN_SECRETSANTAFOR));
                 for (String eachSanta : santaList) {
@@ -203,10 +203,16 @@ public class DataSource {
         }
     }
 
-    public static void saveExclusionsToDB(String personName, String exclusionName) {
+    public static void addExclusionsToDB(String personName, String exclusionName) {
 	    String currentExclusions = queryNameColumn(personName, COLUMN_EXCLUSIONS);
 	    currentExclusions = currentExclusions + "," + exclusionName;
 	    updateNameColumn(personName, COLUMN_EXCLUSIONS, currentExclusions);
+    }
+
+    public static void saveSecretSantaToDB(String personName, String secretSanta) {
+        String currentSecretSanta = queryNameColumn(personName, COLUMN_SECRETSANTAFOR);
+        currentSecretSanta = currentSecretSanta + "," + secretSanta;
+        updateNameColumn(personName, COLUMN_SECRETSANTAFOR, currentSecretSanta);
     }
 
 

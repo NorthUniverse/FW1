@@ -155,11 +155,14 @@ public class GameMethods {
 				break;
 			}
 		}
-        for (Person eachPerson : personsPlaying) {
-            
-        }
 
 		System.out.println("You have to buy gift for " + personsPlaying.get(0).getSecrectSantaFor().get(personsPlaying.get(0).getSecrectSantaFor().size() - 1) + "\n");
+		for (Person eachPerson : personsPlaying) {
+		    List<String> secretSantaList = eachPerson.getSecrectSantaFor();
+		    Collections.reverse(secretSantaList);
+            DataSource.saveSecretSantaToDB(eachPerson.getName(), secretSantaList.get(0));
+		    Collections.reverse(secretSantaList);
+        }
 		System.out.println("See all Secret Santa game results(Y/N)? ");
 		Scanner viewAllConditionScanner = new Scanner(System.in);
 		String viewAllCondition = viewAllConditionScanner.nextLine();
