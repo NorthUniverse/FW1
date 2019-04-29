@@ -70,13 +70,18 @@ public class DataSource {
     }
 
     private static void insertToDB(Statement statement, String name, String exclusions, String secretSantaFor) throws SQLException{
-        statement.execute("INSERT INTO " + TABLE_PERSONS +
+//        statement.execute("INSERT INTO " + TABLE_PERSONS +
+//                " (" +  COLUMN_NAME + ", " +
+//                COLUMN_EXCLUSIONS + ", " +
+//                COLUMN_SECRETSANTAFOR +
+//                ") " +
+//                "VALUES ('" + "Dennis" + "', '" + "" + "', '" + ""+ "')")
+	    statement.execute("INSERT INTO " + TABLE_PERSONS +
                 " (" +  COLUMN_NAME + ", " +
                 COLUMN_EXCLUSIONS + ", " +
                 COLUMN_SECRETSANTAFOR +
                 ") " +
-                "VALUES (" + name + ", " + exclusions + ", " + secretSantaFor + ")");
-
+                "VALUES ('" + name + "', '" + exclusions + "', '" + secretSantaFor + "')");
     }
 
     private static void deleteFromDB(Statement statement, String name) throws SQLException{
@@ -147,7 +152,7 @@ public class DataSource {
     public static void saveToDB(String name) {
         try {
             Statement statement = connection.createStatement();
-            insertToDB(statement, name, null, null);
+            insertToDB(statement, name, "", "");
             if (statement != null) {
                 statement.close();
             }
@@ -218,6 +223,7 @@ public class DataSource {
 
 
 	public static void main(String[] args) {
+	    int i =1;
 		try {
 			Connection conn = DriverManager.getConnection(CONNECTION_STRING);
 			Statement statement = conn.createStatement();
@@ -228,7 +234,20 @@ public class DataSource {
                                           COLUMN_SECRETSANTAFOR + " text" +
                                    " )");
 
-			ResultSet results = statement.executeQuery("SELECT * FROM " + TABLE_PERSONS);
+            statement.execute("INSERT INTO " + TABLE_PERSONS +
+                    " (" +  COLUMN_NAME + ", " +
+                    COLUMN_EXCLUSIONS + ", " +
+                    COLUMN_SECRETSANTAFOR +
+                    ") " +
+                    "VALUES ('" + "Rahul" + "', '" + "" + "', '" + ""+ "')");
+
+            System.out.println(i);
+            i++;
+
+//			ResultSet results = statement.executeQuery("SELECT * FROM " + TABLE_PERSONS);
+            ResultSet results = statement.executeQuery("SELECT " + columnName +
+                    " FROM " + TABLE_PERSONS +
+                    " WHERE " + COLUMN_NAME + " = " + name);
 
 			while(results.next()) {
 				System.out.println(results.getString(COLUMN_NAME) + " " +
