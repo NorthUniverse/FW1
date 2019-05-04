@@ -70,12 +70,6 @@ public class DataSource {
     }
 
     private static void insertToDB(Statement statement, String name, String exclusions, String secretSantaFor) throws SQLException{
-//        statement.execute("INSERT INTO " + TABLE_PERSONS +
-//                " (" +  COLUMN_NAME + ", " +
-//                COLUMN_EXCLUSIONS + ", " +
-//                COLUMN_SECRETSANTAFOR +
-//                ") " +
-//                "VALUES ('" + "Dennis" + "', '" + "" + "', '" + ""+ "')")
 	    statement.execute("INSERT INTO " + TABLE_PERSONS +
                 " (" +  COLUMN_NAME + ", " +
                 COLUMN_EXCLUSIONS + ", " +
@@ -86,7 +80,7 @@ public class DataSource {
 
     private static void deleteFromDB(Statement statement, String name) throws SQLException{
         statement.execute("DELETE FROM " + TABLE_PERSONS +
-                " WHERE" +  COLUMN_NAME + " = " + name + ")");
+                " WHERE " +  COLUMN_NAME + " = '" + name + "'");
     }
 
     public static String queryNameColumn(String name, String columnName) {
@@ -95,7 +89,8 @@ public class DataSource {
             Statement statement = connection.createStatement();
             ResultSet results = statement.executeQuery("SELECT " + columnName +
                                                            " FROM " + TABLE_PERSONS +
-                                                           " WHERE " + COLUMN_NAME + " = " + name);
+                                                           " WHERE " + COLUMN_NAME + " = '" + name + "'");
+//            ResultSet results = statement.executeQuery("SELECT COLUMN_EXCLUSIONS FROM TABLE_PERSONS WHERE name ");
             while(results.next()) {
                 queryResult = results.getString(columnName);
             }
@@ -113,15 +108,13 @@ public class DataSource {
     }
 
     public static void updateNameColumn(String name, String columnName, String newColumnValue) {
-        String queryResult = "";
         try {
             Statement statement = connection.createStatement();
-            ResultSet results = statement.executeQuery("UPDATE " + TABLE_PERSONS +
+            statement.execute("UPDATE " + TABLE_PERSONS +
                                                             " SET " + columnName +
-                                                            " = " + newColumnValue +
-                                                            " WHERE " + COLUMN_NAME +
-                                                            " = " + name);
-            results.close();
+                                                            " = '" + newColumnValue +
+                                                            "' WHERE " + COLUMN_NAME +
+                                                            " = '" + name + "'");
             if (statement != null) {
                 statement.close();
             }
@@ -223,44 +216,51 @@ public class DataSource {
 
 
 	public static void main(String[] args) {
-	    int i =1;
-		try {
-			Connection conn = DriverManager.getConnection(CONNECTION_STRING);
-			Statement statement = conn.createStatement();
-//			statement.execute("DROP TABLE IF EXISTS " + TABLE_PERSONS);
-			statement.execute("CREATE TABLE IF NOT EXISTS " + TABLE_PERSONS +
-					               " (" + COLUMN_NAME + " text, " +
-                                          COLUMN_EXCLUSIONS + " text, "  +
-                                          COLUMN_SECRETSANTAFOR + " text" +
-                                   " )");
 
-            statement.execute("INSERT INTO " + TABLE_PERSONS +
-                    " (" +  COLUMN_NAME + ", " +
-                    COLUMN_EXCLUSIONS + ", " +
-                    COLUMN_SECRETSANTAFOR +
-                    ") " +
-                    "VALUES ('" + "Rahul" + "', '" + "" + "', '" + ""+ "')");
 
-            System.out.println(i);
-            i++;
+//        initialize();
+//        String result = queryNameColumn("Dennis", COLUMN_EXCLUSIONS);
+//        System.out.println(result);
+//        closeConnection();
 
+
+//		try {
+//			Connection conn = DriverManager.getConnection(CONNECTION_STRING);
+//			Statement statement = conn.createStatement();
+////			statement.execute("DROP TABLE IF EXISTS " + TABLE_PERSONS);
+//			statement.execute("CREATE TABLE IF NOT EXISTS " + TABLE_PERSONS +
+//					               " (" + COLUMN_NAME + " text, " +
+//                                          COLUMN_EXCLUSIONS + " text, "  +
+//                                          COLUMN_SECRETSANTAFOR + " text" +
+//                                   " )");
+//
+////			insertToDB(statement, "Test1", "testEclusions1", "testSecretSanta1");
+//
+////            statement.execute("INSERT INTO " + TABLE_PERSONS +
+////                    " (" +  COLUMN_NAME + ", " +
+////                    COLUMN_EXCLUSIONS + ", " +
+////                    COLUMN_SECRETSANTAFOR +
+////                    ") " +
+////                    "VALUES ('" + "TEST1" + "', '" + "TEST2" + "" + "', '" + ""+ "')");
+//
+//
 //			ResultSet results = statement.executeQuery("SELECT * FROM " + TABLE_PERSONS);
-            ResultSet results = statement.executeQuery("SELECT " + columnName +
-                    " FROM " + TABLE_PERSONS +
-                    " WHERE " + COLUMN_NAME + " = " + name);
-
-			while(results.next()) {
-				System.out.println(results.getString(COLUMN_NAME) + " " +
-									results.getString(COLUMN_EXCLUSIONS) + " " +
-									results.getString(COLUMN_SECRETSANTAFOR));
-			}
-			results.close();
-			statement.close();
-			conn.close();
-		} catch (SQLException e) {
-			System.out.println("SQL Exception: " + e.getMessage());
-			e.printStackTrace();
-		}
+////            ResultSet results = statement.executeQuery("SELECT " + COLUMN_NAME +
+////                    " FROM " + TABLE_PERSONS +
+////                    " WHERE " + COLUMN_NAME );
+//
+//			while(results.next()) {
+//				System.out.println(results.getString(COLUMN_NAME) + " " +
+//									results.getString(COLUMN_EXCLUSIONS) + " " +
+//									results.getString(COLUMN_SECRETSANTAFOR));
+//			}
+//			results.close();
+//			statement.close();
+//			conn.close();
+//		} catch (SQLException e) {
+//			System.out.println("SQL Exception: " + e.getMessage());
+//			e.printStackTrace();
+//		}
 
 	}
 

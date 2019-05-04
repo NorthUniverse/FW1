@@ -16,7 +16,7 @@ public class DataSourceTest {
         OutputStream outputStream = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outputStream);
         System.setOut(printStream);
-        assertEquals("\r\n", outputStream.toString());
+        assertEquals("", outputStream.toString());
     }
 
     @Test
@@ -41,9 +41,11 @@ public class DataSourceTest {
     @Test
     public void queryNameColumn() {
         DataSource.initialize();
-        DataSource.saveToDB("Dennis");
-        String name = DataSource.queryNameColumn("Dennis", DataSource.COLUMN_EXCLUSIONS);
-        System.out.println(name);
+        DataSource.saveToDB("Arya");
+        DataSource.addExclusionsToDB("Arya","NightKing");
+        String name = DataSource.queryNameColumn("Arya", DataSource.COLUMN_EXCLUSIONS);
+        assertEquals(",NightKing", name);
+        DataSource.removeFromDB("Arya");
     }
 
     @Test
