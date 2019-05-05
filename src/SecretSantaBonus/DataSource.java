@@ -168,11 +168,9 @@ public class DataSource {
         }
     }
 
-    public static List<Person> readFromDB() {
+    public static void readFromDB(List<Person> personList) {
 	    try {
             Statement statement = connection.createStatement();
-            List<Person> personList = new ArrayList<>();
-
             ResultSet results = statement.executeQuery("SELECT * FROM " + TABLE_PERSONS);
             int i = 0;
 
@@ -193,12 +191,9 @@ public class DataSource {
             if (statement != null) {
                 statement.close();
             }
-            return personList;
         } catch (SQLException e) {
             System.out.println("SQL Exception: " + e.getMessage());
             e.printStackTrace();
-        } finally {
-	        return new ArrayList<>();
         }
     }
 

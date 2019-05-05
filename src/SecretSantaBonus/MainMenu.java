@@ -1,5 +1,6 @@
 package SecretSantaBonus;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +12,8 @@ public class MainMenu implements Runnable {
 		System.out.println("Welcome to Secret Santa Game: ");
 		boolean quit = false;
 		DataSource.initialize();
-		List<SecretSantaBonus.Person> personsPlaying = DataSource.readFromDB();
+		List<Person> personsPlaying = new ArrayList<>();
+		DataSource.readFromDB(personsPlaying);
 
 		while (!quit) {
 			try {
