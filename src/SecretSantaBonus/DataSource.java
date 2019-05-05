@@ -209,56 +209,6 @@ public class DataSource {
         updateNameColumn(personName, COLUMN_SECRETSANTAFOR, currentSecretSanta);
     }
 
-
-	public static void main(String[] args) {
-
-
-//        initialize();
-//        String result = queryNameColumn("Dennis", COLUMN_EXCLUSIONS);
-//        System.out.println(result);
-//        closeConnection();
-
-
-//		try {
-//			Connection conn = DriverManager.getConnection(CONNECTION_STRING);
-//			Statement statement = conn.createStatement();
-////			statement.execute("DROP TABLE IF EXISTS " + TABLE_PERSONS);
-//			statement.execute("CREATE TABLE IF NOT EXISTS " + TABLE_PERSONS +
-//					               " (" + COLUMN_NAME + " text, " +
-//                                          COLUMN_EXCLUSIONS + " text, "  +
-//                                          COLUMN_SECRETSANTAFOR + " text" +
-//                                   " )");
-//
-////			insertToDB(statement, "Test1", "testEclusions1", "testSecretSanta1");
-//
-////            statement.execute("INSERT INTO " + TABLE_PERSONS +
-////                    " (" +  COLUMN_NAME + ", " +
-////                    COLUMN_EXCLUSIONS + ", " +
-////                    COLUMN_SECRETSANTAFOR +
-////                    ") " +
-////                    "VALUES ('" + "TEST1" + "', '" + "TEST2" + "" + "', '" + ""+ "')");
-//
-//
-//			ResultSet results = statement.executeQuery("SELECT * FROM " + TABLE_PERSONS);
-////            ResultSet results = statement.executeQuery("SELECT " + COLUMN_NAME +
-////                    " FROM " + TABLE_PERSONS +
-////                    " WHERE " + COLUMN_NAME );
-//
-//			while(results.next()) {
-//				System.out.println(results.getString(COLUMN_NAME) + " " +
-//									results.getString(COLUMN_EXCLUSIONS) + " " +
-//									results.getString(COLUMN_SECRETSANTAFOR));
-//			}
-//			results.close();
-//			statement.close();
-//			conn.close();
-//		} catch (SQLException e) {
-//			System.out.println("SQL Exception: " + e.getMessage());
-//			e.printStackTrace();
-//		}
-
-	}
-
 	private static String listToString(List<String> stringList) {
 	    String string = "";
 	    for(String eachString : stringList) {

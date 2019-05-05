@@ -81,9 +81,9 @@ public class DataSourceTest {
     @Test
     public void removeFromDB() {
         DataSource.initialize();
-        DataSource.saveToDB("Hordor");
-        DataSource.removeFromDB("Hordor");
-        String name = DataSource.queryNameColumn("Hordor", DataSource.COLUMN_EXCLUSIONS);
+        DataSource.saveToDB("Sansa");
+        DataSource.removeFromDB("Sansa");
+        String name = DataSource.queryNameColumn("Sansa", DataSource.COLUMN_EXCLUSIONS);
         assertEquals("", name);
         DataSource.closeConnection();
     }
@@ -92,19 +92,33 @@ public class DataSourceTest {
     public void readFromDB() {
         DataSource.initialize();
         LinkedList<Person> personsPlaying = new LinkedList<Person>();
+        DataSource.saveToDB("Tyrion");
         DataSource.readFromDB(personsPlaying);
-        System.out.println(personsPlaying.size());
-        for (Person eachPerson: personsPlaying) {
-            System.out.println(eachPerson.getName());
-        }
+        int personListSize = personsPlaying.size();
+        assertTrue(personListSize >=  1);
+        DataSource.removeFromDB("Tyrion");
         DataSource.closeConnection();
     }
 
     @Test
     public void addExclusionsToDB() {
+        DataSource.initialize();
+        DataSource.saveToDB("Dragon1");
+        DataSource.addExclusionsToDB("Dragon1","Dragon2");
+        String name = DataSource.queryNameColumn("Dragon1", DataSource.COLUMN_EXCLUSIONS);
+        assertEquals(",Dragon2", name);
+        DataSource.removeFromDB("Dragon1");
+        DataSource.closeConnection();
     }
 
     @Test
     public void saveSecretSantaToDB() {
+        DataSource.initialize();
+        DataSource.saveToDB("sirDavos");
+        DataSource.saveSecretSantaToDB("sirDavos","Jorah");
+        String name = DataSource.queryNameColumn("sirDavos", DataSource.COLUMN_SECRETSANTAFOR);
+        assertEquals(",Jorah", name);
+        DataSource.removeFromDB("sirDavos");
+        DataSource.closeConnection();
     }
 }

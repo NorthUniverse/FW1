@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecretSantaBonus/secretSanta.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecretSantaBonus/secretSanta.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataSource.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataSource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="170" column="23" selection-start-line="170" selection-start-column="23" selection-end-line="170" selection-end-column="23" />
+            <state relative-caret-position="410">
+              <caret line="209" column="5" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSourceTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataSourceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+            <state relative-caret-position="859">
+              <caret line="122" column="5" lean-forward="true" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3189#3197#0" expanded="true" />
@@ -63,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -232,13 +232,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DataSourceTest.readFromDB">
+  <component name="RunManager" selected="JUnit.DataSourceTest.saveSecretSantaToDB">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="BinaryTree_Abstraction.Main" />
       <module name="FW1" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
-    <configuration name="DataSourceTest.queryNameColumn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DataSourceTest.addExclusionsToDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FW1" />
       <extension name="coverage">
         <pattern>
@@ -250,7 +250,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="SecretSantaBonus" />
       <option name="MAIN_CLASS_NAME" value="SecretSantaBonus.DataSourceTest" />
-      <option name="METHOD_NAME" value="queryNameColumn" />
+      <option name="METHOD_NAME" value="addExclusionsToDB" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -307,6 +307,29 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="DataSourceTest.saveSecretSantaToDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FW1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SecretSantaBonus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="SecretSantaBonus" />
+      <option name="MAIN_CLASS_NAME" value="SecretSantaBonus.DataSourceTest" />
+      <option name="METHOD_NAME" value="saveSecretSantaToDB" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="DataSourceTest.saveToDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FW1" />
       <extension name="coverage">
@@ -320,29 +343,6 @@
       <option name="PACKAGE_NAME" value="SecretSantaBonus" />
       <option name="MAIN_CLASS_NAME" value="SecretSantaBonus.DataSourceTest" />
       <option name="METHOD_NAME" value="saveToDB" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="DataSourceTest.updateNameColumn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FW1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SecretSantaBonus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="SecretSantaBonus" />
-      <option name="MAIN_CLASS_NAME" value="SecretSantaBonus.DataSourceTest" />
-      <option name="METHOD_NAME" value="updateNameColumn" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -392,19 +392,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.DataSourceTest.queryNameColumn" />
-      <item itemvalue="JUnit.DataSourceTest.updateNameColumn" />
       <item itemvalue="JUnit.DataSourceTest.saveToDB" />
       <item itemvalue="JUnit.DataSourceTest.removeFromDB" />
       <item itemvalue="JUnit.DataSourceTest.readFromDB" />
+      <item itemvalue="JUnit.DataSourceTest.addExclusionsToDB" />
+      <item itemvalue="JUnit.DataSourceTest.saveSecretSantaToDB" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DataSourceTest.saveSecretSantaToDB" />
+        <item itemvalue="JUnit.DataSourceTest.addExclusionsToDB" />
         <item itemvalue="JUnit.DataSourceTest.readFromDB" />
         <item itemvalue="JUnit.DataSourceTest.removeFromDB" />
         <item itemvalue="JUnit.DataSourceTest.saveToDB" />
-        <item itemvalue="JUnit.DataSourceTest.updateNameColumn" />
-        <item itemvalue="JUnit.DataSourceTest.queryNameColumn" />
       </list>
     </recent_temporary>
   </component>
@@ -418,13 +418,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543358758572</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Commit 2/9/19">
-      <created>1550189786988</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1550189786988</updated>
     </task>
     <task id="LOCAL-00010" summary="Commit 2/9/19">
       <created>1550270426184</created>
@@ -762,28 +755,17 @@
       <option name="project" value="LOCAL" />
       <updated>1557000067864</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Commit 4/28/2019">
+      <created>1557091683433</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1557091683433</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 16h 50m 15s.xml">
-      <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 16h 50m 30s.xml">
-      <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 16h 51m 29s.xml">
-      <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 16h 53m 32s.xml">
-      <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 17h 00m 29s.xml">
-      <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 17h 01m 15s.xml">
-      <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 17h 03m 04s.xml">
       <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
     </history-entry>
@@ -795,6 +777,24 @@
     </history-entry>
     <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 17h 08m 53s.xml">
       <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 17h 25m 59s.xml">
+      <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataSourceTest_removeFromDB - 2019.05.05 at 18h 20m 59s.xml">
+      <configuration name="DataSourceTest.removeFromDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 18h 25m 06s.xml">
+      <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataSourceTest_readFromDB - 2019.05.05 at 18h 25m 40s.xml">
+      <configuration name="DataSourceTest.readFromDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataSourceTest_addExclusionsToDB - 2019.05.05 at 18h 30m 06s.xml">
+      <configuration name="DataSourceTest.addExclusionsToDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataSourceTest_saveSecretSantaToDB - 2019.05.05 at 18h 40m 21s.xml">
+      <configuration name="DataSourceTest.saveSecretSantaToDB" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -809,7 +809,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.32943678" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Run" order="8" sideWeight="0.49840596" weight="0.38802084" />
+      <window_info active="true" anchor="right" id="Run" order="8" sideWeight="0.49840596" visible="true" weight="0.38802084" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="5" />
       <window_info id="Capture Tool" order="6" />
@@ -819,7 +819,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info active="true" anchor="right" id="Debug" order="10" visible="true" weight="0.41041666" />
+      <window_info anchor="right" id="Debug" order="10" weight="0.41041666" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.50159407" side_tool="true" weight="0.33125" />
@@ -850,81 +850,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java</url>
-          <line>173</line>
-          <properties />
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java</url>
-          <line>181</line>
-          <properties />
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java</url>
-          <line>185</line>
-          <properties />
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java</url>
-          <line>189</line>
-          <properties />
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java</url>
-          <line>97</line>
-          <properties />
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java</url>
-          <line>102</line>
-          <properties />
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java</url>
-          <line>103</line>
-          <properties />
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java</url>
-          <line>99</line>
-          <properties />
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java</url>
-          <line>190</line>
-          <properties />
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java</url>
-          <line>191</line>
-          <properties />
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java</url>
-          <line>101</line>
-          <properties />
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java</url>
-          <line>96</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="76" />
+      <option name="time" value="78" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1194,6 +1120,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/GameMethods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -1204,33 +1140,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="859">
+          <caret line="122" column="5" lean-forward="true" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3189#3197#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="170" column="23" selection-start-line="170" selection-start-column="23" selection-end-line="170" selection-end-column="23" />
+        <state relative-caret-position="410">
+          <caret line="209" column="5" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecretSantaBonus/DataSourceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3189#3197#0" expanded="true" />
           </folding>
         </state>
       </provider>
